@@ -4948,6 +4948,44 @@ case 'logo2' :{
                      
                     }
                     break
+ /////////////////proxy 
+
+case 'proxy':{
+    const load = await QueenNilu.sendText(m.chat, mess.wait , m, ) 
+    const results = await fetchJson(`https://api-ravindumanoj.ml/?code=proxy_list&api=YourApiKey`)
+    const cap = `
+*ip :* ${results.ip}
+*port :* ${results.port}
+*code :* ${results.code}
+*country :* ${results.country}
+*anonymity :* ${results.anonymity}
+*google :* ${results.google}
+*last_check :* ${results.last_check}
+*Https :* ${results.Https}
+`
+const templateButtons = [
+ {index: 1, urlButton: {displayText: `හිරු පුවත්`, url: 'https://youtube.com/c/janithsadanuwan' }},
+
+
+ ]
+
+const templateMessage = {
+ caption: '  ◉ 💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔  💃 ◉\n\n'+cap,
+ footer: global.botname,
+ templateButtons: templateButtons,
+ headerType: 4
+}
+  
+  await QueenNilu.sendMessage(m.chat, templateMessage, { quoted: m })
+  await QueenNilu.sendMessage(m.chat,{delete : load.key })  
+
+ // await QueenNilu.sendMessage(m.chat, { image: { url : news.img} , caption : cap }, { quoted: m })
+
+
+
+}
+    break
+
 
 
                 case 'eglitch' : case 'eberry': case 'eneon' : case 'ecrismas' : case 'ethunder' : case 'eninja' :
