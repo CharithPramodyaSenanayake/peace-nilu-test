@@ -10599,29 +10599,53 @@ case 'grpmenu': {
   ╰⏰  *ᴛɪᴍᴇ* ${time}
   
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}tiktok* 
-    💬 𝗗𝗘𝗖 : ${TIKTOK}    
+  💬 𝗗𝗘𝗖 : ${TIKTOK}
+  ${D_E} 𝗨𝗦𝗘 : .tiktok https://vm.tiktok.com/ZS8uuwXG7
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}tiktok2*  
-    💬 𝗗𝗘𝗖 :  ${TIKTOK} _type ( ii )_   
+  💬 𝗗𝗘𝗖 :  ${TIKTOK} _type ( ii )_ 
+  ${D_E} 𝗨𝗦𝗘 : .tikto2 https://vm.tiktok.com/ZS8uuwXG7    
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}insta*  
-    💬 𝗗𝗘𝗖 :  ${INSTA}   
+  💬 𝗗𝗘𝗖 :  ${INSTA}
+  ${D_E} 𝗨𝗦𝗘 : .insta https://www.instagram.com/reel/Cm8rR_XBc0t/?igshid=YmMyMTA2M2Y= 
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}ig2*  
-    💬 𝗗𝗘𝗖 :  ${IG2}   
+  💬 𝗗𝗘𝗖 :  ${IG2}
+  ${D_E} 𝗨𝗦𝗘 : .ig2 https://www.instagram.com/reel/Cm8rR_XBc0t/?igshid=YmMyMTA2M2Y=
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}fb*  
-    💬 𝗗𝗘𝗖 :  ${FB}   
+  💬 𝗗𝗘𝗖 :  ${FB}
+  ${D_E} 𝗨𝗦𝗘 : .fb https://www.facebook.com/10/videos/878/?mibextid=Nif5oz    
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}fb2*  
-    💬 𝗗𝗘𝗖 :  ${FB2}   
+  💬 𝗗𝗘𝗖 :  ${FB2}
+  ${D_E} 𝗨𝗦𝗘 : .fb https://www.facebook.com/10/videos/878/?mibextid=Nif5oz   
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}ytmp3*  
-    💬 𝗗𝗘𝗖 :  ${YTMP3}   
+  💬 𝗗𝗘𝗖 :  ${YTMP3}
+  ${D_E} 𝗨𝗦𝗘 : .ytmp3 https://youtu.be/4jnKUto3i3c   
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}ytmp4*  
-    💬 𝗗𝗘𝗖 :  ${YTMP4}   
+  💬 𝗗𝗘𝗖 :  ${YTMP4}
+  ${D_E} 𝗨𝗦𝗘 : .ytmp4 https://youtu.be/4jnKUto3i3c
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}getmusic*  
-    💬 𝗗𝗘𝗖 :  ${GETMUSIC}   
+  💬 𝗗𝗘𝗖 :  ${GETMUSIC}
+  ${D_E} 𝗨𝗦𝗘 : .getmusic Bombai Motai
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}getvideo*  
-    💬 𝗗𝗘𝗖 :  ${GETVIDEO}   
+  💬 𝗗𝗘𝗖 :  ${GETVIDEO}
+  ${D_E} 𝗨𝗦𝗘 : .getvideo Bombai Motai 
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}song*  
-    💬 𝗗𝗘𝗖 :  ${SONG}   
+  💬 𝗗𝗘𝗖 :  ${SONG} 
+  ${D_E} 𝗨𝗦𝗘 : .song lelena
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}song2*  
-    💬 𝗗𝗘𝗖 :  ${SONG2}   
+  💬 𝗗𝗘𝗖 :  ${SONG2}
+  ${D_E} 𝗨𝗦𝗘 : .song2 lelena
+     
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}video*  
     💬 𝗗𝗘𝗖 :  ${VIDEO}   
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}video2*  
