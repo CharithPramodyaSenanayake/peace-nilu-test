@@ -10434,27 +10434,36 @@ case 'grpmenu': {
   ├📡  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⏰  *ᴛɪᴍᴇ* ${time}
   
-  ${M_E}𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}grouplink* 
-     💬𝗗𝗘𝗖 : ${GRPDES}
-  ${D_E}𝗨𝗦𝗘 : .grouplink
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}grouplink* 
+     💬 𝗗𝗘𝗖 : ${GRPDES}
+  ${D_E} 𝗨𝗦𝗘 : .grouplink
   ${M_E} *${prefix}setgrouppp* 
      ${D_E} ${GRPPP}
+
   ${M_E} *${prefix}setname* 
      ${D_E} ${SETNAME}
+
   ${M_E} *${prefix}group* 
      ${D_E} ${GROUDES}
+
   ${M_E} *${prefix}editinfo* 
      ${D_E} ${EDITINFO}
+
   ${M_E} *${prefix}grupinfo* 
      ${D_E} ${GRPINFO}
+
   ${M_E} *${prefix}add* 
      ${D_E} ${ADDDES}
+
   ${M_E} *${prefix}kick* 
      ${D_E} ${KICKDES}
+
   ${M_E} *${prefix}promote* 
      ${D_E} ${PROMOTEDES}
+
   ${M_E} *${prefix}demote* 
      ${D_E} ${DEMOTEDES}
+     
   
   *───────────◯* `,
   next = Lang.NEXT_BUTTON
