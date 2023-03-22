@@ -10806,21 +10806,36 @@ case 'grpmenu': {
   ╰⏰  *ᴛɪᴍᴇ* ${time}
   
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}play*   
-    💬 𝗗𝗘𝗖 :  ${PLAY}
+  💬 𝗗𝗘𝗖 :  ${PLAY}
+  ${D_E} 𝗨𝗦𝗘 : .play lelena
+  
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}yts*   
-    💬 𝗗𝗘𝗖 :  ${YTS}
+  💬 𝗗𝗘𝗖 :  ${YTS}
+  ${D_E} 𝗨𝗦𝗘 : .yts janithsadauwan
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}google*   
-    💬 𝗗𝗘𝗖 :  ${GOOGLE}
+  💬 𝗗𝗘𝗖 :  ${GOOGLE}
+  ${D_E} 𝗨𝗦𝗘 : .google Queen Nilu whatsapp bot
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}img*   
-    💬 𝗗𝗘𝗖 :  ${IMG}
+  💬 𝗗𝗘𝗖 :  ${IMG}
+  ${D_E} 𝗨𝗦𝗘 : .img Queen Nilu
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}pinterest*   
-    💬 𝗗𝗘𝗖 :  ${PINSA}
+  💬 𝗗𝗘𝗖 :  ${PINSA}
+  ${D_E} 𝗨𝗦𝗘 : .pinterest anime
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}wallpaper*   
-    💬 𝗗𝗘𝗖 :  ${WALLPAPER}
+  💬 𝗗𝗘𝗖 :  ${WALLPAPER}
+  ${D_E} 𝗨𝗦𝗘 : .wallpaper alone
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}wikimedia*   
-    💬 𝗗𝗘𝗖 :  ${WIKI}
+  💬 𝗗𝗘𝗖 :  ${WIKI}
+  ${D_E} 𝗨𝗦𝗘 : .wikimedia   sri lanka
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}ytsearch*   
-    💬 𝗗𝗘𝗖 :  ${YTS}
+  💬 𝗗𝗘𝗖 :  ${YTS}
+  ${D_E} 𝗨𝗦𝗘 : .ytsearch Janithsadanuwan
         
   *──────────◯*
   `
