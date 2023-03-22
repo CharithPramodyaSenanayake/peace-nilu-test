@@ -8380,6 +8380,31 @@ m.reply(mess.wait)
                     return('Error!')
                 })
 break
+case 'sendmsg' :{
+    text1 = q.split(";")[0]
+    text2 = q.split(";")[1]
+    if (!text) throw '*👸💬 Please give me a recipient\'s number and your massage* \n _example .sendmsg'+global.owner+' ; Hello how are you_'
+await QueenNilu.sendText(text1+'@s.whatsapp.net', text2 || '*Hello I am QueenNilu*')
+}
+break
+
+case 'ss' : {  
+                        
+var NEED = ''
+if (global.LANG == 'EN') NEED = '*The link you provided is not valid* '
+if (global.LANG == 'SI') NEED = '*ඔබ ලබා දුන් සබැඳිය වලංගු නැත*'
+
+if (!text) throw NEED
+const load = await QueenNilu.sendText(m.chat,mess.wait)
+await getBuffer(`https://my-shinz.herokuapp.com/api/tools/ssweb?link=${text}`).then(async (imagee) => { 
+await QueenNilu.sendMessage(m.chat, { image: imagee, caption: global.CAPTION }, { quoted: m })
+await QueenNilu.sendMessage(m.chat, { delete: load.key }) 
+  
+   }).catch((err) => m.reply(NOT_FOUND))
+
+}
+
+break
 case 'animewaifu':
 m.reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/waifu`)
