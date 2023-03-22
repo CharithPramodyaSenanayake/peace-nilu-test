@@ -10434,35 +10434,36 @@ case 'grpmenu': {
   ├📡  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⏰  *ᴛɪᴍᴇ* ${time}
   
-  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}grouplink* 
-     💬 𝗗𝗘𝗖 : ${GRPDES}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}grouplink* 
+  💬 𝗗𝗘𝗖 : ${GRPDES}
   ${D_E} 𝗨𝗦𝗘 : .grouplink
-  ${M_E} *${prefix}setgrouppp* 
-     ${D_E} ${GRPPP}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}setgrouppp* 
+  💬 𝗗𝗘𝗖 : ${GRPPP}
+  ${D_E} 𝗨𝗦𝗘 : .setgrouppp
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}setname* 
+  💬 𝗗𝗘𝗖 : ${SETNAME}
+  ${D_E} 𝗨𝗦𝗘 : .setgrouppp
 
-  ${M_E} *${prefix}setname* 
-     ${D_E} ${SETNAME}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}group* 
+    💬 𝗗𝗘𝗖 : ${GROUDES}
 
-  ${M_E} *${prefix}group* 
-     ${D_E} ${GROUDES}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}editinfo* 
+    💬 𝗗𝗘𝗖 : ${EDITINFO}
 
-  ${M_E} *${prefix}editinfo* 
-     ${D_E} ${EDITINFO}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}grupinfo* 
+    💬 𝗗𝗘𝗖 : ${GRPINFO}
 
-  ${M_E} *${prefix}grupinfo* 
-     ${D_E} ${GRPINFO}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}add* 
+    💬 𝗗𝗘𝗖 : ${ADDDES}
 
-  ${M_E} *${prefix}add* 
-     ${D_E} ${ADDDES}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}kick* 
+    💬 𝗗𝗘𝗖 : ${KICKDES}
 
-  ${M_E} *${prefix}kick* 
-     ${D_E} ${KICKDES}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}promote* 
+    💬 𝗗𝗘𝗖 : ${PROMOTEDES}
 
-  ${M_E} *${prefix}promote* 
-     ${D_E} ${PROMOTEDES}
-
-  ${M_E} *${prefix}demote* 
-     ${D_E} ${DEMOTEDES}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}demote* 
+    💬 𝗗𝗘𝗖 : ${DEMOTEDES}
      
   
   *───────────◯* `,
@@ -10588,46 +10589,46 @@ case 'grpmenu': {
   ├📡  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⏰  *ᴛɪᴍᴇ* ${time}
   
-  ${M_E} *${prefix}tiktok* 
-     ${D_E} ${TIKTOK}    
-  ${M_E} *${prefix}tiktok2*  
-     ${D_E}  ${TIKTOK} _type ( ii )_   
-  ${M_E} *${prefix}insta*  
-     ${D_E}  ${INSTA}   
-  ${M_E} *${prefix}ig2*  
-     ${D_E}  ${IG2}   
-  ${M_E} *${prefix}fb*  
-     ${D_E}  ${FB}   
-  ${M_E} *${prefix}fb2*  
-     ${D_E}  ${FB2}   
-  ${M_E} *${prefix}ytmp3*  
-     ${D_E}  ${YTMP3}   
-  ${M_E} *${prefix}ytmp4*  
-     ${D_E}  ${YTMP4}   
-  ${M_E} *${prefix}getmusic*  
-     ${D_E}  ${GETMUSIC}   
-  ${M_E} *${prefix}getvideo*  
-     ${D_E}  ${GETVIDEO}   
-  ${M_E} *${prefix}song*  
-     ${D_E}  ${SONG}   
-  ${M_E} *${prefix}song2*  
-     ${D_E}  ${SONG2}   
-  ${M_E} *${prefix}video*  
-     ${D_E}  ${VIDEO}   
-  ${M_E} *${prefix}video2*  
-     ${D_E}  ${VIDEO2}   
-  ${M_E} *${prefix}ytv*  
-     ${D_E}  ${YTV}   
-  ${M_E} *${prefix}yt*  
-     ${D_E}  ${YT}    
-  ${M_E} *${prefix}apk*  
-     ${D_E}  ${APK}    
-  ${M_E} *${prefix}modapk*  
-     ${D_E}  ${MOD_APK}    
-  ${M_E} *${prefix}stelegram*  
-     ${D_E}  ${TELE}    
-  ${M_E} *${prefix}xnxxsh*  
-     ${D_E}  ${XNXX} 
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}tiktok* 
+    💬 𝗗𝗘𝗖 : ${TIKTOK}    
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}tiktok2*  
+    💬 𝗗𝗘𝗖 :  ${TIKTOK} _type ( ii )_   
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}insta*  
+    💬 𝗗𝗘𝗖 :  ${INSTA}   
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}ig2*  
+    💬 𝗗𝗘𝗖 :  ${IG2}   
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}fb*  
+    💬 𝗗𝗘𝗖 :  ${FB}   
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}fb2*  
+    💬 𝗗𝗘𝗖 :  ${FB2}   
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}ytmp3*  
+    💬 𝗗𝗘𝗖 :  ${YTMP3}   
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}ytmp4*  
+    💬 𝗗𝗘𝗖 :  ${YTMP4}   
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}getmusic*  
+    💬 𝗗𝗘𝗖 :  ${GETMUSIC}   
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}getvideo*  
+    💬 𝗗𝗘𝗖 :  ${GETVIDEO}   
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}song*  
+    💬 𝗗𝗘𝗖 :  ${SONG}   
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}song2*  
+    💬 𝗗𝗘𝗖 :  ${SONG2}   
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}video*  
+    💬 𝗗𝗘𝗖 :  ${VIDEO}   
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}video2*  
+    💬 𝗗𝗘𝗖 :  ${VIDEO2}   
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}ytv*  
+    💬 𝗗𝗘𝗖 :  ${YTV}   
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}yt*  
+    💬 𝗗𝗘𝗖 :  ${YT}    
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}apk*  
+    💬 𝗗𝗘𝗖 :  ${APK}    
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}modapk*  
+    💬 𝗗𝗘𝗖 :  ${MOD_APK}    
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}stelegram*  
+    💬 𝗗𝗘𝗖 :  ${TELE}    
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}xnxxsh*  
+    💬 𝗗𝗘𝗖 :  ${XNXX} 
   
   *────────◯*`,
   
@@ -10711,22 +10712,22 @@ case 'grpmenu': {
   ├📡  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⏰  *ᴛɪᴍᴇ* ${time}
   
-  ${M_E} *${prefix}play*   
-     ${D_E}  ${PLAY}
-  ${M_E} *${prefix}yts*   
-     ${D_E}  ${YTS}
-  ${M_E} *${prefix}google*   
-     ${D_E}  ${GOOGLE}
-  ${M_E} *${prefix}img*   
-     ${D_E}  ${IMG}
-  ${M_E} *${prefix}pinterest*   
-     ${D_E}  ${PINSA}
-  ${M_E} *${prefix}wallpaper*   
-     ${D_E}  ${WALLPAPER}
-  ${M_E} *${prefix}wikimedia*   
-     ${D_E}  ${WIKI}
-  ${M_E} *${prefix}ytsearch*   
-     ${D_E}  ${YTS}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}play*   
+    💬 𝗗𝗘𝗖 :  ${PLAY}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}yts*   
+    💬 𝗗𝗘𝗖 :  ${YTS}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}google*   
+    💬 𝗗𝗘𝗖 :  ${GOOGLE}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}img*   
+    💬 𝗗𝗘𝗖 :  ${IMG}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}pinterest*   
+    💬 𝗗𝗘𝗖 :  ${PINSA}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}wallpaper*   
+    💬 𝗗𝗘𝗖 :  ${WALLPAPER}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}wikimedia*   
+    💬 𝗗𝗘𝗖 :  ${WIKI}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}ytsearch*   
+    💬 𝗗𝗘𝗖 :  ${YTS}
         
   *──────────◯*
   `
@@ -10799,10 +10800,10 @@ case 'grpmenu': {
   ├📡  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⏰  *ᴛɪᴍᴇ* ${time}
   
-  ${M_E} *${prefix}coffee*   
-     ${D_E}  ${COFFY}
-  ${M_E} *${prefix}couplepp*   
-     ${D_E}  ${COUPP}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}coffee*   
+    💬 𝗗𝗘𝗖 :  ${COFFY}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}couplepp*   
+    💬 𝗗𝗘𝗖 :  ${COUPP}
      
   *──────────◯*
   `
@@ -10880,12 +10881,12 @@ case 'grpmenu': {
   ├📡  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⏰  *ᴛɪᴍᴇ* ${time}
   
-  ${M_E} *${prefix}couple*   
-     ${D_E}  ${COPLE}
-  ${M_E} *${prefix}mysoulmate*   
-     ${D_E}  ${MYSOLO}
-  ${M_E} *${prefix}math*   
-     ${D_E}  ${MATH}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}couple*   
+    💬 𝗗𝗘𝗖 :  ${COPLE}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}mysoulmate*   
+    💬 𝗗𝗘𝗖 :  ${MYSOLO}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}math*   
+    💬 𝗗𝗘𝗖 :  ${MATH}
      
   *──────────◯*
   `
@@ -10956,17 +10957,17 @@ case 'grpmenu': {
   ├📡  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⏰  *ᴛɪᴍᴇ* ${time}
   
-  ${M_E} *${prefix}bass*
-  ${M_E} *${prefix}blown*
-  ${M_E} *${prefix}deep*
-  ${M_E} *${prefix}earrape*
-  ${M_E} *${prefix}fast*
-  ${M_E} *${prefix}fat*
-  ${M_E} *${prefix}nightcore*
-  ${M_E} *${prefix}reverse*
-  ${M_E} *${prefix}robot*
-  ${M_E} *${prefix}slow*
-  ${M_E} *${prefix}squirrel*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}bass*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}blown*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}deep*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}earrape*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}fast*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}fat*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}nightcore*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}reverse*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}robot*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}slow*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}squirrel*
   
   ${VOICEDESC}
   
@@ -11152,22 +11153,22 @@ case 'grpmenu': {
   ├📡  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⏰  *ᴛɪᴍᴇ* ${time}
   
-  ${M_E} *${prefix}toimage*   
-     ${D_E}  ${IMG}
-  ${M_E} *${prefix}removebg*   
-     ${D_E}  ${RBG}
-  ${M_E} *${prefix}sticker*   
-     ${D_E} ${STICKER}
-  ${M_E} *${prefix}emojimix*   
-     ${D_E}  ${EMOJIMIX}
-  ${M_E} *${prefix}tovideo*   
-     ${D_E}  ${TOVIDEO}
-  ${M_E} *${prefix}togif*   
-     ${D_E}  ${GIF}
-  ${M_E} *${prefix}tourl*   
-     ${D_E}  ${URL} 
-  ${M_E} *${prefix}fancy*   
-     ${D_E}  ${FANCY} 
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}toimage*   
+    💬 𝗗𝗘𝗖 :  ${IMG}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}removebg*   
+    💬 𝗗𝗘𝗖 :  ${RBG}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}sticker*   
+    💬 𝗗𝗘𝗖 : ${STICKER}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}emojimix*   
+    💬 𝗗𝗘𝗖 :  ${EMOJIMIX}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}tovideo*   
+    💬 𝗗𝗘𝗖 :  ${TOVIDEO}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}togif*   
+    💬 𝗗𝗘𝗖 :  ${GIF}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}tourl*   
+    💬 𝗗𝗘𝗖 :  ${URL} 
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}fancy*   
+    💬 𝗗𝗘𝗖 :  ${FANCY} 
      
   *──────────◯*
   `
@@ -11238,59 +11239,59 @@ case 'grpmenu': {
   ├📡  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⏰  *ᴛɪᴍᴇ* ${time}
   
-  ${M_E} ${prefix}akira  
-  ${M_E} ${prefix}ana
-  ${M_E} ${prefix}asuna 
-  ${M_E} ${prefix}ayuzawa 
-  ${M_E} ${prefix}boruto
-  ${M_E} ${prefix}elaina 
-  ${M_E} ${prefix}emilia 
-  ${M_E} ${prefix}erza  
-  ${M_E} ${prefix}gremory  
-  ${M_E} ${prefix}inori  
-  ${M_E} ${prefix}kaga  
-  ${M_E} ${prefix}kaori  
-  ${M_E} ${prefix}kurumi  
-  ${M_E} ${prefix}loli  
-  ${M_E} ${prefix}madara  
-  ${M_E} ${prefix}mikasa  
-  ${M_E} ${prefix}miku  
-  ${M_E} ${prefix}naruto  
-  ${M_E} ${prefix}nezuko  
-  ${M_E} ${prefix}rize  
-  ${M_E} ${prefix}sakura  
-  ${M_E} ${prefix}sasuke  
-  ${M_E} ${prefix}shina  
-  ${M_E} ${prefix}shinka  
-  ${M_E} ${prefix}shota  
-  ${M_E} ${prefix}waifu  
-  ${M_E} ${prefix}yuki  
-  ${M_E} ${prefix}bully
-  ${M_E} ${prefix}cuddle
-  ${M_E} ${prefix}cry
-  ${M_E} ${prefix}hug
-  ${M_E} ${prefix}awoo
-  ${M_E} ${prefix}kiss
-  ${M_E} ${prefix}lick
-  ${M_E} ${prefix}pat
-  ${M_E} ${prefix}smug
-  ${M_E} ${prefix}bonk
-  ${M_E} ${prefix}yeet
-  ${M_E} ${prefix}blush
-  ${M_E} ${prefix}smile
-  ${M_E} ${prefix}wave
-  ${M_E} ${prefix}highfive
-  ${M_E} ${prefix}handhold
-  ${M_E} ${prefix}nom
-  ${M_E} ${prefix}bite
-  ${M_E} ${prefix}glomp
-  ${M_E} ${prefix}slap
-  ${M_E} ${prefix}kill
-  ${M_E} ${prefix}happy
-  ${M_E} ${prefix}wink
-  ${M_E} ${prefix}poke
-  ${M_E} ${prefix}dance
-  ${M_E} ${prefix}cringe
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}akira  
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}ana
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}asuna 
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}ayuzawa 
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}boruto
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}elaina 
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}emilia 
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}erza  
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}gremory  
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}inori  
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}kaga  
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}kaori  
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}kurumi  
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}loli  
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}madara  
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}mikasa  
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}miku  
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}naruto  
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}nezuko  
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}rize  
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}sakura  
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}sasuke  
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}shina  
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}shinka  
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}shota  
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}waifu  
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}yuki  
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}bully
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}cuddle
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}cry
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}hug
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}awoo
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}kiss
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}lick
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}pat
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}smug
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}bonk
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}yeet
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}blush
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}smile
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}wave
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}highfive
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}handhold
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}nom
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}bite
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}glomp
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}slap
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}kill
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}happy
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}wink
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}poke
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}dance
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}cringe
   
   *──────────◯*
   `
@@ -11391,26 +11392,26 @@ case 'grpmenu': {
   ├📡  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⏰  *ᴛɪᴍᴇ* ${time}
   
-  ${M_E} *${prefix}speedtest*   
-      ${D_E}  ${SPEED}
-  ${M_E} *${prefix}ping*   
-      ${D_E}  ${PING}
-  ${M_E} *${prefix}owner*   
-      ${D_E}  ${OWNER}
-  ${M_E} *${prefix}donate*   
-      ${D_E}  ${DONA}
-  ${M_E} *${prefix}menu*   
-      ${D_E}  ${MENU}
-  ${M_E} *${prefix}delete*   
-      ${D_E}  ${DELETE}
-  ${M_E} *${prefix}quoted*   
-      ${D_E}  ${QUO}
-  ${M_E} *${prefix}listpc*   
-      ${D_E}  ${LIP}
-  ${M_E} *${prefix}listonline*   
-      ${D_E}  ${LPO}
-  ${M_E} *${prefix}report*   
-      ${D_E}  ${REPORT}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}speedtest*   
+     💬 𝗗𝗘𝗖 :  ${SPEED}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}ping*   
+     💬 𝗗𝗘𝗖 :  ${PING}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}owner*   
+     💬 𝗗𝗘𝗖 :  ${OWNER}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}donate*   
+     💬 𝗗𝗘𝗖 :  ${DONA}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}menu*   
+     💬 𝗗𝗘𝗖 :  ${MENU}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}delete*   
+     💬 𝗗𝗘𝗖 :  ${DELETE}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}quoted*   
+     💬 𝗗𝗘𝗖 :  ${QUO}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}listpc*   
+     💬 𝗗𝗘𝗖 :  ${LIP}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}listonline*   
+     💬 𝗗𝗘𝗖 :  ${LPO}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}report*   
+     💬 𝗗𝗘𝗖 :  ${REPORT}
       
   *──────────◯*
   `
@@ -11474,23 +11475,23 @@ case 'grpmenu': {
   ├📡  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⏰  *ᴛɪᴍᴇ* ${time}
   
-  ${M_E} *${prefix}eglitch*
-  ${M_E} *${prefix}eberry*
-  ${M_E} *${prefix}eneon*
-  ${M_E} *${prefix}ecrismas*
-  ${M_E} *${prefix}ethunder*
-  ${M_E} *${prefix}eninja*
-  ${M_E} *${prefix}eorange*
-  ${M_E} *${prefix}ecake*
-  ${M_E} *${prefix}estrowberry*
-  ${M_E} *${prefix}eflaming*
-  ${M_E} *${prefix}eshadow*
-  ${M_E} *${prefix}eongrass*
-  ${M_E} *${prefix}eloveu*
-  ${M_E} *${prefix}ecoffee*
-  ${M_E} *${prefix}eilluminati*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}eglitch*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}eberry*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}eneon*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}ecrismas*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}ethunder*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}eninja*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}eorange*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}ecake*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}estrowberry*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}eflaming*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}eshadow*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}eongrass*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}eloveu*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}ecoffee*
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}eilluminati*
   
-     ${D_E} ${prefix}eberry Janiya
+    💬 𝗗𝗘𝗖 : ${prefix}eberry Janiya
    
   *──────────◯*
   `
@@ -11594,12 +11595,12 @@ case 'grpmenu': {
   ├📡  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⏰  *ᴛɪᴍᴇ* ${time}
   
-  ${M_E} *.logo*   
-      ${D_E}  ${LOGODESC}
-  ${M_E} *.logo2*   
-      ${D_E}  ${LOGODESC_2}
-  ${M_E} *.logo3*
-      ${D_E}  ${LOGODESC_3}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *.logo*   
+     💬 𝗗𝗘𝗖 :  ${LOGODESC}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *.logo2*   
+     💬 𝗗𝗘𝗖 :  ${LOGODESC_2}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *.logo3*
+     💬 𝗗𝗘𝗖 :  ${LOGODESC_3}
   
    *_Example : .logo1 Janiya_*
    
@@ -11666,8 +11667,8 @@ case 'grpmenu': {
   ├📡  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⏰  *ᴛɪᴍᴇ* ${time}
   
-  ${M_E} ${prefix}mute
-  ${M_E} ${prefix}antiwame
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}mute
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: ${prefix}antiwame
   
   *──────────◯*
   `
@@ -11747,20 +11748,20 @@ case 'grpmenu': {
   ├📡  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⏰  *ᴛɪᴍᴇ* ${time}
   
-  ${M_E} *${prefix}join*   
-      ${D_E}  ${JOIN}
-  ${M_E} *${prefix}leave*   
-      ${D_E}  ${LEAVE}
-  ${M_E} *${prefix}setbotpp*   
-      ${D_E}  ${SETPP}
-  ${M_E} *${prefix}block*   
-      ${D_E}  ${BLOCK}
-  ${M_E} *${prefix}unblock*   
-      ${D_E}  ${UNBLOCK}
-  ${M_E} *${prefix}bcgroup*   
-      ${D_E}  ${BCGRP}
-  ${M_E} *${prefix}bcall*   
-      ${D_E}  ${BCALL}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}join*   
+     💬 𝗗𝗘𝗖 :  ${JOIN}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}leave*   
+     💬 𝗗𝗘𝗖 :  ${LEAVE}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}setbotpp*   
+     💬 𝗗𝗘𝗖 :  ${SETPP}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}block*   
+     💬 𝗗𝗘𝗖 :  ${BLOCK}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}unblock*   
+     💬 𝗗𝗘𝗖 :  ${UNBLOCK}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}bcgroup*   
+     💬 𝗗𝗘𝗖 :  ${BCGRP}
+  ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}bcall*   
+     💬 𝗗𝗘𝗖 :  ${BCALL}
   
   *──────────◯*
   `
