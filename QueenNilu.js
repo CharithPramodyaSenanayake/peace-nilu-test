@@ -8074,6 +8074,53 @@ var ahegaonsfw = JSON.parse(fs.readFileSync('./Media/HostMedia/nsfw/femdom.json'
 var janiyaresult = pickRandom(ahegaonsfw)
 QueenNilu.sendMessage(m.chat, { caption: mess.success, image: { url: janiyaresult.url }, buttons: but, footer: botname }, { quoted: m })
 break
+case 'stelegram' :{
+
+     if (!text) return reply('👸💬 Please give me a telegram sticker pack link')
+     if (!text.includes('https://t.me/addstickers')) return reply('*👸💬 Please give me a correct link*\n _.stelegram https://t.me/addstickers/ViniProduction_by_MekathKalawak_')
+     //if (!isUrl(args[0]) && !args[0].includes('https://t.me/addstickers')) throw '*The link you provided is not valid*'                
+    await QueenNilu.sendText(m.chat , '*Loading...*' )
+    await fetchJson(`https://my-shinz.herokuapp.com/api/dowloader/telesticker?url=${text}`)
+      .then(async (sticker) => {  
+  //  await QueenNilu.sendText(m.chat, util.format(sticker))
+    const stik = sticker.result
+    const img = stik[1].url
+    const img2 = stik[2].url
+    const img3 = stik[3].url
+    const img4 = stik[4].url
+    const img5 = stik[5].url
+    const img6 = stik[6].url
+    const img7 = stik[7].url
+    const img8 = stik[8].url
+    const img9 = stik[9].url
+    const img10 = stik[10].url
+    const img11 = stik[11].url
+    const img12 = stik[12].url
+    const img13 = stik[13].url
+    const img14 = stik[14].url
+    const img15 = stik[15].url
+    
+    //await QueenNilu.sendMessage(m.chat ,{ sticker : { url : img }, packname: '𝑄𝑢𝑒𝑒𝑛 𝐸𝑙𝑖𝑠𝑎' })
+    await QueenNilu.sendImageAsSticker(m.chat, img, m, { packname: global.packname, author: '『💙𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 💙』' })
+    await QueenNilu.sendImageAsSticker(m.chat, img, m, { packname: global.packname, author: '『💙𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 💙』' })
+    await QueenNilu.sendImageAsSticker(m.chat, img2, m, { packname: global.packname, author: '『💙𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 💙』' })
+    await QueenNilu.sendImageAsSticker(m.chat, img3, m, { packname: global.packname, author: '『💙𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 💙』' })
+    await QueenNilu.sendImageAsSticker(m.chat, img4, m, { packname: global.packname, author: '『💙𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 💙』' })
+    await QueenNilu.sendImageAsSticker(m.chat, img5, m, { packname: global.packname, author: '『💙𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 💙』' })
+    await QueenNilu.sendImageAsSticker(m.chat, img6, m, { packname: global.packname, author: '『💙𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 💙』' })
+    await QueenNilu.sendImageAsSticker(m.chat, img7, m, { packname: global.packname, author: '『💙𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 💙』' })
+    await QueenNilu.sendImageAsSticker(m.chat, img8, m, { packname: global.packname, author: '『💙𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 💙』' })
+    await QueenNilu.sendImageAsSticker(m.chat, img9, m, { packname: global.packname, author: '『💙𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 💙』' })
+    await QueenNilu.sendImageAsSticker(m.chat, img10, m, { packname: global.packname, author: '『💙𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 💙』' })
+    await QueenNilu.sendImageAsSticker(m.chat, img11, m, { packname: global.packname, author: '『💙𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 💙 』' })
+    await QueenNilu.sendImageAsSticker(m.chat, img12, m, { packname: global.packname, author: '『💙𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 💙 』' })
+    await QueenNilu.sendImageAsSticker(m.chat, img13, m, { packname: global.packname, author: '『💙𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 💙 』' })
+    await QueenNilu.sendImageAsSticker(m.chat, img14, m, { packname: global.packname, author: '『💙𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 💙』' })
+    await QueenNilu.sendImageAsSticker(m.chat, img15, m, { packname: global.packname, author: '『💙𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 💙 』' })
+    }).catch((err) => m.reply('*මෙම telegram sticker Download කල නොහැක !!!*'))
+    
+}
+break
 case 'foot':
 if (!m.isGroup) return m.reply(mess.group)
 	if (!AntiNsfw) return m.reply(mess.nsfw)
@@ -10473,7 +10520,7 @@ case 'grpmenu': {
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}demote* 
   💬 𝗗𝗘𝗖 : ${DEMOTEDES}
   ${D_E} 𝗨𝗦𝗘 : .demote @mention number
-  
+
   *──────────◯* `,
   next = Lang.NEXT_BUTTON
   back = Lang.BACK_BUTTON
@@ -10646,19 +10693,32 @@ case 'grpmenu': {
   ${D_E} 𝗨𝗦𝗘 : .song2 lelena
 
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}video*  
-    💬 𝗗𝗘𝗖 :  ${VIDEO}   
+  💬 𝗗𝗘𝗖 :  ${VIDEO}
+  ${D_E} 𝗨𝗦𝗘 : .video https://youtu.be/4jnKUto3i3c
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}video2*  
-    💬 𝗗𝗘𝗖 :  ${VIDEO2}   
+  💬 𝗗𝗘𝗖 :  ${VIDEO2}
+  ${D_E} 𝗨𝗦𝗘 : .video2 https://youtu.be/4jnKUto3i3c
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}ytv*  
-    💬 𝗗𝗘𝗖 :  ${YTV}   
+  💬 𝗗𝗘𝗖 :  ${YTV} 
+  ${D_E} 𝗨𝗦𝗘 : .ytv https://youtu.be/4jnKUto3i3c
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}yt*  
-    💬 𝗗𝗘𝗖 :  ${YT}    
+  💬 𝗗𝗘𝗖 :  ${YT} 
+  ${D_E} 𝗨𝗦𝗘 : .yt janithsadanuwan
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}apk*  
-    💬 𝗗𝗘𝗖 :  ${APK}    
+  💬 𝗗𝗘𝗖 :  ${APK}
+  ${D_E} 𝗨𝗦𝗘 : .apk whatsapp
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}modapk*  
-    💬 𝗗𝗘𝗖 :  ${MOD_APK}    
+  💬 𝗗𝗘𝗖 :  ${MOD_APK} 
+  ${D_E} 𝗨𝗦𝗘 : .modapk whatsapp
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}stelegram*  
-    💬 𝗗𝗘𝗖 :  ${TELE}    
+  💬 𝗗𝗘𝗖 :  ${TELE}
+  ${D_E} 𝗨𝗦𝗘 : .stelegram https://t.me/addstickers/ViniProduction_by_MekathKalawak    
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}xnxxsh*  
     💬 𝗗𝗘𝗖 :  ${XNXX} 
   
