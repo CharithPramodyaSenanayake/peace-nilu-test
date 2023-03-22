@@ -10434,8 +10434,9 @@ case 'grpmenu': {
   ├📡  *ʀᴇsᴘᴏɴ sᴘᴇᴇᴅ* ${ping}
   ╰⏰  *ᴛɪᴍᴇ* ${time}
   
-  ${M_E} *${prefix}grouplink* 
-     ${D_E} ${GRPDES}
+  ${M_E}𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}grouplink* 
+     💬𝗗𝗘𝗖 : ${GRPDES}
+  ${D_E}𝗨𝗦𝗘 : .grouplink
   ${M_E} *${prefix}setgrouppp* 
      ${D_E} ${GRPPP}
   ${M_E} *${prefix}setname* 
