@@ -10437,35 +10437,44 @@ case 'grpmenu': {
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}grouplink* 
   💬 𝗗𝗘𝗖 : ${GRPDES}
   ${D_E} 𝗨𝗦𝗘 : .grouplink
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}setgrouppp* 
   💬 𝗗𝗘𝗖 : ${GRPPP}
   ${D_E} 𝗨𝗦𝗘 : .setgrouppp
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}setname* 
   💬 𝗗𝗘𝗖 : ${SETNAME}
   ${D_E} 𝗨𝗦𝗘 : .setgrouppp
 
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}group* 
-    💬 𝗗𝗘𝗖 : ${GROUDES}
+  💬 𝗗𝗘𝗖 : ${GROUDES}
+  ${D_E} 𝗨𝗦𝗘 : .group
 
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}editinfo* 
-    💬 𝗗𝗘𝗖 : ${EDITINFO}
+  💬 𝗗𝗘𝗖 : ${EDITINFO}
+  ${D_E} 𝗨𝗦𝗘 : .editinfo
 
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}grupinfo* 
-    💬 𝗗𝗘𝗖 : ${GRPINFO}
+  💬 𝗗𝗘𝗖 : ${GRPINFO}
+  ${D_E} 𝗨𝗦𝗘 : .grupinfo
 
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}add* 
-    💬 𝗗𝗘𝗖 : ${ADDDES}
+  💬 𝗗𝗘𝗖 : ${ADDDES}
+  ${D_E} 𝗨𝗦𝗘 : .add  94767438882@s.whatsapp.net
 
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}kick* 
-    💬 𝗗𝗘𝗖 : ${KICKDES}
+  💬 𝗗𝗘𝗖 : ${KICKDES}
+  ${D_E} 𝗨𝗦𝗘 : .kick @mention number
 
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}promote* 
-    💬 𝗗𝗘𝗖 : ${PROMOTEDES}
+  💬 𝗗𝗘𝗖 : ${PROMOTEDES}
+  ${D_E} 𝗨𝗦𝗘 : .promote @mention number
 
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}demote* 
-    💬 𝗗𝗘𝗖 : ${DEMOTEDES}
-     
+  💬 𝗗𝗘𝗖 : ${DEMOTEDES}
+  ${D_E} 𝗨𝗦𝗘 : .demote @mention number
   
+ 
   *───────────◯* `,
   next = Lang.NEXT_BUTTON
   back = Lang.BACK_BUTTON
