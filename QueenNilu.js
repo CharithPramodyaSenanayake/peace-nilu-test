@@ -10474,8 +10474,7 @@ case 'grpmenu': {
   💬 𝗗𝗘𝗖 : ${DEMOTEDES}
   ${D_E} 𝗨𝗦𝗘 : .demote @mention number
   
- 
-  *───────────◯* `,
+  *──────────◯* `,
   next = Lang.NEXT_BUTTON
   back = Lang.BACK_BUTTON
   
@@ -10645,7 +10644,7 @@ case 'grpmenu': {
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}song2*  
   💬 𝗗𝗘𝗖 :  ${SONG2}
   ${D_E} 𝗨𝗦𝗘 : .song2 lelena
-     
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}video*  
     💬 𝗗𝗘𝗖 :  ${VIDEO}   
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}video2*  
