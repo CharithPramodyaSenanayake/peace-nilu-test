@@ -10718,10 +10718,11 @@ case 'grpmenu': {
 
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}stelegram*  
   💬 𝗗𝗘𝗖 :  ${TELE}
-  ${D_E} 𝗨𝗦𝗘 : .stelegram https://t.me/addstickers/ViniProduction_by_MekathKalawak    
+  ${D_E} 𝗨𝗦𝗘 : .stelegram https://t.me/addstickers/ViniProduction_by_MekathKalawak  
+
   ${M_E} 𝗖𝗢𝗠𝗠𝗔𝗡𝗗: *${prefix}xnxxsh*  
-    💬 𝗗𝗘𝗖 :  ${XNXX} 
-  
+  💬 𝗗𝗘𝗖 :  ${XNXX}
+  ${D_E} 𝗨𝗦𝗘 : .xnxxsh hii
   *────────◯*`,
   
   next = Lang.NEXT_BUTTON
