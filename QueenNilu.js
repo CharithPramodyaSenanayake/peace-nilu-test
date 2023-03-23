@@ -1025,12 +1025,12 @@ sections
                                                                 ]
                                                              },
                                                              {
-                                                                 "title": "● ǫᴜᴇᴇɴ ɴɪʟᴜ ʙᴏᴛ ᴍᴅ ᴠ2 ●",
+                                                                 "title": "● ǫᴜᴇᴇɴ ɴɪʟᴜ  ●",
                                                                  "rows": [
                                                                      {
-                                                                         "title": "💃 ᴀʙᴏᴜᴛ  ǫᴜᴇᴇɴ ɴɪʟᴜ",
-                                                                         "description": Lang.ABOUT_CMD ,
-                                                                         "rowId": `${prefix}about`
+                                                                         "title": "💃 ᴀʙᴏᴜᴛ ꜰʀᴇᴇ ɪɴᴛᴇʀɴᴇᴛ",
+                                                                         "description": "About free internet",
+                                                                         "rowId": `aboutehi`
                                                                      }
                                                                    ]
                                            }
