@@ -991,7 +991,7 @@ sections
 
               ////----------------------------------------EHI STORE ----------------------------------\\\\\
 
-              case 'vpn' :    case 'feeinternet': case 'v2ray' :  {
+              case 'vpn' :    case 'feeinternet':  {
                 await QueenNilu.sendMessage(from, { react: { text: `💉`, key: m.key }})
                     const sections =[
                                                              {
@@ -1015,7 +1015,7 @@ sections
                                                                     {
                                                                         "title": "🐼 ᴇʜɪ ꜰɪʟᴇꜱ",
                                                                         "description": "Ehi files for http injector " ,
-                                                                        "rowId": `niluehi`
+                                                                        "rowId": `ehifiles`
                                                                     },
                                                                     {
                                                                         "title": "🐋 ᴠ2ʀᴀʏ .ᴀᴘʟʜᴀ ꜰɪʟᴇꜱ",
