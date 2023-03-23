@@ -185,7 +185,6 @@ if (cek == null) return null
 	    const isBan = banned.includes(m.sender)
         const isPremium = premium.includes(m.sender)
         const isAutoSticker = m.isGroup ? autosticker.includes(from) : false
-        const anitbad = m.isGroup ? anitbad.includes(from) : false
         const Autoreply = m.isGroup ? autorep.includes(from) : false
         const solot = [
 		'🍊 : 🍒 : 🍐',
@@ -1118,38 +1117,7 @@ sections
               
 
                  break
-                 case 'anitbad': {
-                    if (!m.isGroup) return m.reply(mess.group)
-                    if (!isBotAdmins) return m.reply(mess.botAdmin)
-                    if (!isAdmins && !isCreator) return m.reply(mess.admin)
-                    if (args[0] === "on") {
-                    if (anitbad) return m.reply('Already activated')
-                    nttoxic.push(from)
-                    fs.writeFileSync('./database/BAD_WORD.json', JSON.stringify(nttoxic))
-                    m.reply('Success in turning on anitbad in this group')
-                    var groupe = await QueenNilu.groupMetadata(from)
-                    var members = groupe['participants']
-                    var mems = []
-                    members.map(async adm => {
-                    mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
-                    })
-                    QueenNilu.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nNobody is allowed to use bad words in this group, one who uses will be kicked immediately!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
-                    } else if (args[0] === "off") {
-                    if (!anitbad) return m.reply('Already deactivated')
-                    let off = nttoxic.indexOf(from)
-                    nttoxic.splice(off, 1)
-                    fs.writeFileSync('./database/BAD_WORD.json', JSON.stringify(nttoxic))
-                    m.reply('Success in turning off anitbad in this group')
-                    } else {
-                      let buttonsnttoxic= [
-                      { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-                      { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
-                      ]
-                      await QueenNilu.sendButtonText(m.chat, buttonsnttoxic, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
-                      }
-                      }
-                      break 
-
+                
                  case 'aboutehi' :{
                     var ABOUTEHI = ''
                     if (global.LANG == 'EN') ABOUTEHI = ` *Ehi file is*,
@@ -9426,7 +9394,7 @@ m.reply(imoji)
 }
 break
 ///  ANTI BAD WORDS
-if (global.ANTI_BADWORD == 'true' && m.isGroup && !isAdmins && !isCreator) {
+if (global.ANTI_BADWORD = 'true' && m.isGroup && !isAdmins && !isCreator) {
          
     const bad = JSON.parse(fs.readFileSync('./database/BAD_WORD.json'))
     //await fetchJson(`https://github.com/DarkMakerofc/UPLOADS/raw/main/JSON/BADWORD.json`)
