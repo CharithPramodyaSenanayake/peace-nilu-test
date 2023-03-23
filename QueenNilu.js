@@ -1065,7 +1065,7 @@ sections
                                                                          {
                                                                             "title": "🏓 ꜰᴀᴄᴇʙᴏᴏᴋ",
                                                                             "description": "Facebook ehi files",
-                                                                            "rowId": `alphav2ray`
+                                                                            "rowId": `niluehi3`
                                                                         },
                                                                         {
                                                                             "title": "🥊 ʏᴏᴜᴛᴜʙᴇ",
@@ -1148,6 +1148,24 @@ sections
                                             
                                             }
                                             break
+
+                                            case 'niluehi3': {
+    
+                                                const nilu = await fetchJson ('https://github.com/DragonxJanith/UPLOADS/raw/main/JSON/EHIJSON.json')
+                                              ehi1 = nilu.EHI_FILES[0].US_FB1
+                                              ehi2 = nilu.EHI_FILES[0].US_FB2
+                                              ehi3 = nilu.EHI_FILES[0].US_FB3
+                                
+                                                             
+                                                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi1 }, mimetype: 'application/octet-stream', fileName: `💖 facebook.ehi`}, { quoted: m })
+                                                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi2 }, mimetype: 'application/octet-stream', fileName: `💖 facebook.ehi`}, { quoted: m })
+                                                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi3 }, mimetype: 'application/octet-stream', fileName: `💖 facebook.ehi`}, { quoted: m })
+                                
+                                                            
+                                                            await QueenNilu.sendText(m.chat, `✅ _Success send_ *${m.pushName}* _Ehi Files..._`,m)
+                                                            
+                                                            }
+                                                            break
               
                             case 'ehi1' :  {
                               const buffer = await getBuffer('https://te.legra.ph/file/57c7bd5c8b26430634a40.jpg')
@@ -10107,7 +10125,7 @@ case 'menu': {
   │ ${prefix}twitter
   │ ${prefix}ytmp3
   │ ${prefix}ytmp4
-  │ ${prefix}ehi
+  │ ${prefix}vpn
   │ ${prefix}apk
   │ ${prefix}modapk
   │ ${prefix}downxvi
