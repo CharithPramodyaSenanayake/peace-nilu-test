@@ -6917,6 +6917,52 @@ m.reply('Success in turning off all antilink in this group')
   }
   }
   break
+  case 'hi': case 'hai' : case 'හායි': {
+             
+    if (global.VOICE_REPLY == 'true') {
+    await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/Dragonxjanith/UPLOADS/raw/main/VOICE/hi.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
+    }
+    }
+    break
+    
+    case 'genfancy' : {
+    m.reply(text)
+    }
+    break
+    case 'mk': case 'මොකද කරන්නේ' :{
+    if (global.VOICE_REPLY == 'true') {
+    await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/Dragonxjanith/UPLOADS/raw/main/VOICE/mokuthna.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
+    }
+    }
+    break
+    
+    case 'gn': case 'night' :{
+    if (global.VOICE_REPLY == 'true') {
+    await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/Dragonxjanith/UPLOADS/raw/main/VOICE/bs.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
+    }
+    }
+    break
+    
+    case 'bs': {
+    if (global.VOICE_REPLY == 'true') {
+    await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/Dragonxjanith/UPLOADS/raw/main/VOICE/bs.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
+    }
+    }
+    break
+    
+    case 'gm': case 'morning' :{
+    if (global.VOICE_REPLY == 'true') {
+    await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/Dragonxjanith/UPLOADS/raw/main/VOICE/gm.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
+    }
+    }
+    break
+    
+    case 'hmm' :case 'බායි' :{
+    if (global.VOICE_REPLY == 'true') {
+    await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/Dragonxjanith/UPLOADS/raw/main/VOICE/hmm.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
+    }
+    }
+    break
 
 case 'antiwame': {
 if (!m.isGroup) return m.reply(mess.group)
