@@ -9403,6 +9403,22 @@ if (!text) return m.reply(`_Name a Series or movie`)
          }
 
      break
+     /// AUTO STICKER COSTEM SEND \\\
+
+for (let anji of sticker){
+    if (budy.toLowerCase() === anji){
+        result = fs.readFileSync(`./Media/sticker/${anji}.webp`)
+        ElisaBotMd.sendMessage(m.chat, { sticker: result }, { quoted: m })
+        }
+}
+for (let anju of audio){
+    if (budy.toLowerCase() === anju){
+        result = fs.readFileSync(`./Media/audio/${anju}.mp3`)
+        ElisaBotMd.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
+        }
+}
+
+
      /// AUTO REPLY MASSAGE \\\
 const auto_reply_msg = JSON.parse(fs.readFileSync('./database/autoreply.json'))
 const resevmsg = auto_reply_msg.massage
@@ -9413,7 +9429,8 @@ const sendmsg = auto_reply_msg.reply_massage
 m.reply(imoji)
 }
 }
-break
+
+
 ///  ANTI BAD WORDS
 if (global.ANTI_BADWORD = 'true' && m.isGroup && !isAdmins && !isCreator) {
          
