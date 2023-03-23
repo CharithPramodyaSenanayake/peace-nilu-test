@@ -1130,6 +1130,24 @@ sections
                             
                             }
                             break
+
+                            case 'niluehi2': {
+    
+                                const nilu = await fetchJson ('https://github.com/DragonxJanith/UPLOADS/raw/main/JSON/EHIJSON.json')
+                              ehi1 = nilu.EHI_FILES[0].US_WP1
+                              ehi2 = nilu.EHI_FILES[0].US_WP2
+                              ehi3 = nilu.EHI_FILES[0].US_WP3
+                
+                                             
+                                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi1 }, mimetype: 'application/octet-stream', fileName: `🌷 WhatsApp.ehi`}, { quoted: m })
+                                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi2 }, mimetype: 'application/octet-stream', fileName: `🌷 WhatsApp.ehi`}, { quoted: m })
+                                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi3 }, mimetype: 'application/octet-stream', fileName: `🌷 WhatsApp.ehi`}, { quoted: m })
+                
+                                            
+                                            await QueenNilu.sendText(m.chat, `✅ _Success send_ *${m.pushName}* _Ehi Files..._`,m)
+                                            
+                                            }
+                                            break
               
                             case 'ehi1' :  {
                               const buffer = await getBuffer('https://te.legra.ph/file/57c7bd5c8b26430634a40.jpg')
