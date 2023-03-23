@@ -1020,7 +1020,7 @@ sections
                                                                     {
                                                                         "title": "🐋 ᴠ2ʀᴀʏ .ᴀᴘʟʜᴀ ꜰɪʟᴇꜱ",
                                                                         "description": "alpha configs for alpha v2ray" ,
-                                                                        "rowId": `${prefix}ownermenu`
+                                                                        "rowId": ``
                                                                     }
                                                                 ]
                                                              },
