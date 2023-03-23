@@ -1115,29 +1115,16 @@ sections
 
               case 'niluehi': {
     
-                const ehinima = await fetchJson ('https://github.com/DragonxJanith/UPLOADS/raw/main/JSON/EHIJSON.json')
-              ehi = ehinima.EHI_FILES[0].SG_FILE1
-              ehi2 = ehinima.EHI_FILES[0].SG_FILE2
-              ehi3 = ehinima.EHI_FILES[0].SG_FILE3
-              ehi4 = ehinima.EHI_FILES[0].SG_FILE4
-              ehi5 = ehinima.EHI_FILES[1].US_FILE1
-              ehi6 = ehinima.EHI_FILES[1].US_FILE2
-              ehi7 = ehinima.EHI_FILES[1].US_FILE3
-              ehi8 = ehinima.EHI_FILES[1].US_FILE4
+                const nilu = await fetchJson ('https://github.com/DragonxJanith/UPLOADS/raw/main/JSON/EHIJSON.json')
+              ehi1 = nilu.EHI_FILES[0].US_ZOOM1
+              ehi2 = nilu.EHI_FILES[0].US_ZOOM2
+              ehi3 = nilu.EHI_FILES[0].US_ZOOM3
+
                              
-                            await QueenNilu.sendMessage(m.chat, { text : `
-            ${ehinima.EHI}
-            ${ehinima.C_E_DATES}
-            ${ehinima.XX_XX}
-            ` } ,{ quoted: m })
-                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI} FaceBook ${ehinima.EHI_IMOJI}.ehi`}, { quoted: m })
-                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi2 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI} Whatsapp ${ehinima.EHI_IMOJI}.ehi `}, { quoted: m })
-                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi3 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI} Youtube ${ehinima.EHI_IMOJI}.ehi`}, { quoted: m })
-                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi4 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI} Zoom ${ehinima.EHI_IMOJI}.ehi`}, { quoted: m })
-                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi5 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI2} FaceBook ${ehinima.EHI_IMOJI2}.ehi`}, { quoted: m })
-                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi6 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI2} Whatsapp ${ehinima.EHI_IMOJI2}.ehi `}, { quoted: m })
-                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi7 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI2} Youtube ${ehinima.EHI_IMOJI2}.ehi`}, { quoted: m })
-                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi8 }, mimetype: 'application/octet-stream', fileName: `${ehinima.EHI_IMOJI2} Zoom ${ehinima.EHI_IMOJI2}.ehi`}, { quoted: m })
+                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi1 }, mimetype: 'application/octet-stream', fileName: `☘️ Zoom🇺🇸1.ehi`}, { quoted: m })
+                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi2 }, mimetype: 'application/octet-stream', fileName: `☘️ Zoom🇺🇸2.ehi`}, { quoted: m })
+                            await QueenNilu.sendMessage(m.chat, { document: { url: ehi3 }, mimetype: 'application/octet-stream', fileName: `☘️ Zoom🇺🇸3.ehi`}, { quoted: m })
+
                             
                             await QueenNilu.sendText(m.chat, `✅ _Success send_ *${m.pushName}* _Ehi Files..._`,m)
                             
