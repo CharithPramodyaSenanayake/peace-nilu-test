@@ -28,15 +28,20 @@ BOT SETTINGS
 global.LANG = 'EN'
 
 global.READ_MASSAGE = true
+
 // enable desable Girls Voice Reply
 global.VOICE_REPLY = true
+
 // Do you want show time on your bio use "true" want desable use "false"
 global.AUTO_BIO = false
+
 // Inbox massage block PM block
 global.INBOX_BLOCK = false
 
 //Inbox Block MSG
 global.INBOX_BLOCK_MSG = 'blockedd'
+
+//Anti Bad word
 global.ANTI_BADWORD = 'true'
 
 
