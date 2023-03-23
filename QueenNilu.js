@@ -508,7 +508,7 @@ QueenNilu.sendMessage(from, {text:`\`\`\`「 Wa.me Link Detected 」\`\`\`\n\n@$
   }
   }
 //anti bad words by xeon
-if (antiToxic)
+if (antibadword)
 if (bad.includes(messagesD)) {
 tos = ['Hey, watch your mouth','Never been taught how to speak?','Stop being toxic my friend🤢','Dont be toxic🦄']
 sin =  tos[Math.floor(Math.random() * (tos.length))]
