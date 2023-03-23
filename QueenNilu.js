@@ -1055,7 +1055,7 @@ sections
                                                                          {
                                                                              "title": "🔮 ᴢᴏᴏᴍ",
                                                                              "description": "zoom ehi files",
-                                                                             "rowId": `httpinjector`
+                                                                             "rowId": `niluehi1`
                                                                          },
                                                                          {
                                                                              "title": "🍀 ᴡʜᴀᴛꜱᴀᴘᴘ",
@@ -1113,7 +1113,7 @@ sections
     
 
 
-              case 'niluehi': {
+              case 'niluehi1': {
     
                 const nilu = await fetchJson ('https://github.com/DragonxJanith/UPLOADS/raw/main/JSON/EHIJSON.json')
               ehi1 = nilu.EHI_FILES[0].US_ZOOM1
