@@ -995,12 +995,12 @@ sections
                 await QueenNilu.sendMessage(from, { react: { text: `💉`, key: m.key }})
                     const sections =[
                                                              {
-                                                                 "title": `● ᴡᴏʀᴋ ᴛʏᴘᴇ ● `,
+                                                                 "title": `● ᴀᴘᴋ ꜰᴏʀ ᴛʜᴇ ꜰʀᴇᴇ ɪɴᴛᴇʀɴᴇᴛ ● `,
                                                                  "rows": [
                                                                      {
-                                                                         "title": "👥ᴘᴜʙʟɪᴄ",
-                                                                         "description": "Bot for Public use",
-                                                                         "rowId": `public`
+                                                                         "title": "⛱️ ʜᴛᴛᴘ ɪɴᴊᴇᴄᴛᴏʀ",
+                                                                         "description": "ehi ,ssh can use",
+                                                                         "rowId": `httpinjector`
                                                                      },
                                                                      {
                                                                          "title": "👤ᴘʀɪᴠᴀᴛᴇ",
@@ -1031,9 +1031,9 @@ sections
                                            }
                                        ]
                 const listMessage = {
-                  text: "*⚙️ 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝚂𝙴𝚃𝚃𝙸𝙽𝙶 𝙻𝙸𝚂𝚃*\n\n\nYou Can Change The Bot Settings By The using This List 🤹‍♂️",
+                  text: "💃𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝙵𝚁𝙴𝙴 𝙸𝙽𝚃𝙴𝚁𝙽𝙴𝚃 ✈️\n\nYou can Get 👇🏻\n\n🫧ApkS \n🫧Files \n🫧SSH   and more ...\n\n©ᴊᴀɴɪʏᴀ ᴏꜰᴄ 2023",
                   footer: `ǫᴜᴇᴇɴ ɴɪʟᴜ`,
-                  title: `Hi 👋 ${ownername}`,
+                  title: `Hi 👋 ${pushname}`,
                   buttonText: "Click Here",
                   sections
                 }
