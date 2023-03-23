@@ -1003,8 +1003,8 @@ sections
                                                                          "rowId": `httpinjector`
                                                                      },
                                                                      {
-                                                                         "title": "👤ᴘʀɪᴠᴀᴛᴇ",
-                                                                         "description": "Bot for self use",
+                                                                         "title": "🚀 ᴀʟᴘʜᴀ ᴠ2ʀᴀʏ",
+                                                                         "description": "V2ray app .alpha files can use",
                                                                          "rowId": `self`
                                                                      }
                                                                  ]
