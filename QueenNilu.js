@@ -991,6 +991,58 @@ sections
 
               ////----------------------------------------EHI STORE ----------------------------------\\\\\
 
+              case 'feeinternet': case 'v2ray' :  {
+                await QueenNilu.sendMessage(from, { react: { text: `💉`, key: m.key }})
+                    const sections =[
+                                                             {
+                                                                 "title": `● ᴡᴏʀᴋ ᴛʏᴘᴇ ● `,
+                                                                 "rows": [
+                                                                     {
+                                                                         "title": "👥ᴘᴜʙʟɪᴄ",
+                                                                         "description": "Bot for Public use",
+                                                                         "rowId": `public`
+                                                                     },
+                                                                     {
+                                                                         "title": "👤ᴘʀɪᴠᴀᴛᴇ",
+                                                                         "description": "Bot for self use",
+                                                                         "rowId": `self`
+                                                                     }
+                                                                 ]
+                                                             },
+                                                             {
+                                                                 "title": "● ᴏᴡɴᴇʀ ᴢᴏɴᴇ ●",
+                                                                 "rows": [
+                                                                     {
+                                                                         "title": "🗣️ ᴏᴡɴᴇʀ ᴄᴏᴍᴍᴀɴᴅꜱ",
+                                                                         "description": Lang.OWNER_CMD ,
+                                                                         "rowId": `${prefix}ownermenu`
+                                                                     }
+                                                                 ]
+                                                             },
+                                                             {
+                                                                 "title": "● ǫᴜᴇᴇɴ ɴɪʟᴜ ʙᴏᴛ ᴍᴅ ᴠ2 ●",
+                                                                 "rows": [
+                                                                     {
+                                                                         "title": "💃 ᴀʙᴏᴜᴛ  ǫᴜᴇᴇɴ ɴɪʟᴜ",
+                                                                         "description": Lang.ABOUT_CMD ,
+                                                                         "rowId": `${prefix}about`
+                                                                     }
+                                                                   ]
+                                           }
+                                       ]
+                const listMessage = {
+                  text: "*⚙️ 𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝚂𝙴𝚃𝚃𝙸𝙽𝙶 𝙻𝙸𝚂𝚃*\n\n\nYou Can Change The Bot Settings By The using This List 🤹‍♂️",
+                  footer: `ǫᴜᴇᴇɴ ɴɪʟᴜ`,
+                  title: `Hi 👋 ${ownername}`,
+                  buttonText: "Click Here",
+                  sections
+                }
+                const sendMsg = await QueenNilu.sendMessage(m.chat, listMessage,{ react: { text: `👋`, key: m.key }})
+                }
+                break
+
+
+
 
               case 'niluehi': {
     
