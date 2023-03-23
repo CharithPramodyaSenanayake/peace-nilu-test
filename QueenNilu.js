@@ -1050,22 +1050,32 @@ sections
                     await QueenNilu.sendMessage(from, { react: { text: `💉`, key: m.key }})
                         const sections =[
                                                                  {
-                                                                     "title": `● ᴀᴘᴋ ꜰᴏʀ ᴛʜᴇ ꜰʀᴇᴇ ɪɴᴛᴇʀɴᴇᴛ ● `,
+                                                                     "title": `🇺🇸 ᴜɴɪᴛᴇᴅ ꜱᴛᴀᴛᴇꜱ`,
                                                                      "rows": [
                                                                          {
-                                                                             "title": "⛱️ ʜᴛᴛᴘ ɪɴᴊᴇᴄᴛᴏʀ",
-                                                                             "description": "ehi ,ssh can use",
+                                                                             "title": "🔮 ᴢᴏᴏᴍ",
+                                                                             "description": "zoom ehi files",
                                                                              "rowId": `httpinjector`
                                                                          },
                                                                          {
-                                                                             "title": "🚀 ᴀʟᴘʜᴀ ᴠ2ʀᴀʏ",
-                                                                             "description": "V2ray app .alpha files can use",
+                                                                             "title": "🍀 ᴡʜᴀᴛꜱᴀᴘᴘ",
+                                                                             "description": "whatsapp ehi files",
                                                                              "rowId": `alphav2ray`
-                                                                         }
+                                                                         },
+                                                                         {
+                                                                            "title": "🏓 ꜰᴀᴄᴇʙᴏᴏᴋ",
+                                                                            "description": "Facebook ehi files",
+                                                                            "rowId": `alphav2ray`
+                                                                        },
+                                                                        {
+                                                                            "title": "🥊 ʏᴏᴜᴛᴜʙᴇ",
+                                                                            "description": "Youtube ehi files",
+                                                                            "rowId": `alphav2ray`
+                                                                        }
                                                                      ]
                                                                  },
                                                                  {
-                                                                    "title": "● ᴇʜɪ ꜰɪʟᴇꜱ ᴀɴᴅ ᴠ2ʀᴀʏ ꜰɪʟᴇꜱ ●",
+                                                                    "title": "🇸🇬 ꜱɪɴɢᴘᴏᴜʀ",
                                                                     "rows": [
                                                                         {
                                                                             "title": "🐼 ᴇʜɪ ꜰɪʟᴇꜱ",
