@@ -991,7 +991,7 @@ sections
 
               ////----------------------------------------EHI STORE ----------------------------------\\\\\
 
-              case 'feeinternet': case 'v2ray' :  {
+              case 'vpn' :    case 'feeinternet': case 'v2ray' :  {
                 await QueenNilu.sendMessage(from, { react: { text: `💉`, key: m.key }})
                     const sections =[
                                                              {
@@ -1005,7 +1005,7 @@ sections
                                                                      {
                                                                          "title": "🚀 ᴀʟᴘʜᴀ ᴠ2ʀᴀʏ",
                                                                          "description": "V2ray app .alpha files can use",
-                                                                         "rowId": `self`
+                                                                         "rowId": `alphav2ray`
                                                                      }
                                                                  ]
                                                              },
@@ -1036,7 +1036,7 @@ sections
                                            }
                                        ]
                 const listMessage = {
-                  text: "💃𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝙵𝚁𝙴𝙴 𝙸𝙽𝚃𝙴𝚁𝙽𝙴𝚃 ✈️\n\nYou can Get 👇🏻\n\n🫧ApkS \n🫧Files \n🫧SSH   and more ...\n\n©ᴊᴀɴɪʏᴀ ᴏꜰᴄ 2023",
+                  text: "💃𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝙵𝚁𝙴𝙴 𝙸𝙽𝚃𝙴𝚁𝙽𝙴𝚃 ✈️\n\nYou can Get 👇🏻\n\n🫧VPN ApkS \n🫧Files \n🫧SSH   and more ...\n\n©ᴊᴀɴɪʏᴀ ᴏꜰᴄ 2023",
                   footer: `ǫᴜᴇᴇɴ ɴɪʟᴜ`,
                   title: `Hi 👋 ${pushname}`,
                   buttonText: "Click Here",
@@ -1179,6 +1179,14 @@ sections
                            await QueenNilu.sendMessage(from, { react: { text: `🚀`, key: app.key }})
                     }
                     break
+                    case 'alphav2ray' : {
+                           
+                        const load = await QueenNilu.sendText(m.chat,'*📤 Uploading...*' )
+                        await QueenNilu.sendMessage(m.chat, { document: { url: 'https://github.com/Dragonxjanith/UPLOADS/raw/main/APK/Alpha_v2ray.apk' }, mimetype: 'application/vnd.android.package-archive', fileName: `Alpha V2ray Queen Nilu (SSHProxyV2Ray) VPN.apk`}, { quoted: m })
+                        const app = await QueenNilu.sendMessage(m.chat, { delete: load.key })
+                        await QueenNilu.sendMessage(from, { react: { text: `🚀`, key: app.key }})
+                 }
+                 break
 
             case'chat': {
                 if (!isCreator) throw mess.owner
