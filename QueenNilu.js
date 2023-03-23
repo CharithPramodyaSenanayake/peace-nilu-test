@@ -434,30 +434,6 @@ let buttonMessage = {
         }
         
           
-//anti bad words by xeon
-if (antibadword)
-if (bad.includes(messagesD)) {
-tos = ['Hey, watch your mouth','Never been taught how to speak?','Stop being toxic my friend🤢','Dont be toxic🦄']
-sin =  tos[Math.floor(Math.random() * (tos.length))]
-m.reply(sin)
-if (m.text) {
-bvl = `\`\`\`「 Bad Word Detected 」\`\`\`\n\nYou are using bad word but you are an admin that's why i won't kick you😇`
-if (isAdmins) return m.reply(bvl)
-if (m.key.fromMe) return m.reply(bvl)
-if (isCreator) return m.reply(bvl)
-        await QueenNilu.sendMessage(m.chat,
-			    {
-			        delete: {
-			            remoteJid: m.chat,
-			            fromMe: false,
-			            id: m.key.id,
-			            participant: m.key.participant
-			        }
-			    })
-			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-QueenNilu.sendMessage(from, {text:`\`\`\`「 Bad Word Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} was kicked because of using bad words in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})}
-}
-
 
       // Mute Chat
       if (db.data.chats[m.chat].mute && !isAdmins && !isCreator) {
