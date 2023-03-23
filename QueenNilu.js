@@ -7557,36 +7557,36 @@ m.reply('Success in turning off antivirus this group')
   }
   }
   break
-case 'nsfw': {
-if (!m.isGroup) return m.reply(mess.group)
-if (!isBotAdmins) return m.reply(mess.botAdmin)
-if (!isAdmins && !isCreator) return m.reply(mess.admin)
-if (args[0] === "on") {
-if (AntiNsfw) return m.reply('Already activated')
-ntnsfw.push(from)
-fs.writeFileSync('./database/nsfw.json', JSON.stringify(ntnsfw))
-m.reply('Success in turning on nsfw in this group')
-var groupe = await QueenNilu.groupMetadata(from)
-var members = groupe['participants']
-var mems = []
-members.map(async adm => {
-mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
-})
-QueenNilu.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nNsfw(not safe for work) feature has been enabled in this group, which means one can access sexual graphics from the bot!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
-} else if (args[0] === "off") {
-if (!AntiNsfw) return m.reply('Already deactivated')
-let off = ntnsfw.indexOf(from)
-ntnsfw.splice(off, 1)
-fs.writeFileSync('./database/nsfw.json', JSON.stringify(ntnsfw))
-m.reply('Success in turning off nsfw in this group')
-} else {
-  let buttonsntnsfw = [
-  { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
-  { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
-  ]
-  await QueenNilu.sendButtonText(m.chat, buttonsntnsfw, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
-  }
-  }
+  case 'nsfw': {
+    if (!m.isGroup) return m.reply(mess.group)
+    if (!isBotAdmins) return m.reply(mess.botAdmin)
+    if (!isAdmins && !isCreator) return m.reply(mess.admin)
+    if (args[0] === "on") {
+    if (AntiNsfw) return m.reply('Already activated')
+    ntnsfw.push(from)
+    fs.writeFileSync('./database/nsfw.json', JSON.stringify(ntnsfw))
+    m.reply('Success in turning on nsfw in this group')
+    var groupe = await QueenNilu.groupMetadata(from)
+    var members = groupe['participants']
+    var mems = []
+    members.map(async adm => {
+    mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
+    })
+    QueenNilu.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nNsfw(not safe for work) feature has been enabled in this group, which means one can access sexual graphics from the bot!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+    } else if (args[0] === "off") {
+    if (!AntiNsfw) return m.reply('Already deactivated')
+    let off = ntnsfw.indexOf(from)
+    ntnsfw.splice(off, 1)
+    fs.writeFileSync('./database/nsfw.json', JSON.stringify(ntnsfw))
+    m.reply('Success in turning off nsfw in this group')
+    } else {
+      let buttonsntnsfw = [
+      { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
+      { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
+      ]
+      await QueenNilu.sendButtonText(m.chat, buttonsntnsfw, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
+      }
+      }
   break
 case 'mediafire': {
 if (!text) throw mess.linkm
