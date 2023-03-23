@@ -36,7 +36,7 @@ global.AUTO_BIO = false
 global.INBOX_BLOCK = false
 
 //Inbox Block MSG
-global.INBOX_BLOCK_MSG = ''
+global.INBOX_BLOCK_MSG = 'blockedd'
 global.ANTI_BADWORD = 'true'
 
 
