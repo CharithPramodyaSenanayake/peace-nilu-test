@@ -198,7 +198,7 @@ if (cek == null) return null
         const AntiLinkTwitter = m.isGroup ? ntilinktwt.includes(from) : false
         const AntiLinkAll = m.isGroup ? ntilinkall.includes(from) : false
         const antiWame = m.isGroup ? ntwame.includes(from) : false
-        const antiToxic = m.isGroup ? nttoxic.includes(from) : false
+        const anitbad = m.isGroup ? nttoxic.includes(from) : false
         const Autoreply = m.isGroup ? autorep.includes(from) : false
         const solot = [
 		'🍊 : 🍒 : 🍐',
@@ -507,6 +507,7 @@ QueenNilu.sendMessage(from, {text:`\`\`\`「 Wa.me Link Detected 」\`\`\`\n\n@$
 			QueenNilu.sendMessage(from, {text:`\`\`\`「 Virus Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending virus in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
   }
   }
+  
 //anti bad words by xeon
 if (antibadword)
 if (bad.includes(messagesD)) {
@@ -1355,6 +1356,37 @@ sections
               
 
                  break
+                 case 'anitbad': {
+                    if (!m.isGroup) return m.reply(mess.group)
+                    if (!isBotAdmins) return m.reply(mess.botAdmin)
+                    if (!isAdmins && !isCreator) return m.reply(mess.admin)
+                    if (args[0] === "on") {
+                    if (anitbad) return m.reply('Already activated')
+                    nttoxic.push(from)
+                    fs.writeFileSync('./database/BAD_WORD.json', JSON.stringify(nttoxic))
+                    m.reply('Success in turning on anitbad in this group')
+                    var groupe = await QueenNilu.groupMetadata(from)
+                    var members = groupe['participants']
+                    var mems = []
+                    members.map(async adm => {
+                    mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
+                    })
+                    QueenNilu.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nNobody is allowed to use bad words in this group, one who uses will be kicked immediately!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+                    } else if (args[0] === "off") {
+                    if (!anitbad) return m.reply('Already deactivated')
+                    let off = nttoxic.indexOf(from)
+                    nttoxic.splice(off, 1)
+                    fs.writeFileSync('./database/BAD_WORD.json', JSON.stringify(nttoxic))
+                    m.reply('Success in turning off anitbad in this group')
+                    } else {
+                      let buttonsnttoxic= [
+                      { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
+                      { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
+                      ]
+                      await QueenNilu.sendButtonText(m.chat, buttonsnttoxic, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
+                      }
+                      }
+                      break 
 
                  case 'aboutehi' :{
                     var ABOUTEHI = ''
@@ -7180,15 +7212,15 @@ m.reply('Success in turning off all antilink in this group')
   }
   }
   break
-case 'antitoxic': {
+case 'anitbad': {
 if (!m.isGroup) return m.reply(mess.group)
 if (!isBotAdmins) return m.reply(mess.botAdmin)
 if (!isAdmins && !isCreator) return m.reply(mess.admin)
 if (args[0] === "on") {
-if (antiToxic) return m.reply('Already activated')
+if (anitbad) return m.reply('Already activated')
 nttoxic.push(from)
-fs.writeFileSync('./database/antitoxic.json', JSON.stringify(nttoxic))
-m.reply('Success in turning on antitoxic in this group')
+fs.writeFileSync('./database/anitbad.json', JSON.stringify(nttoxic))
+m.reply('Success in turning on anitbad in this group')
 var groupe = await QueenNilu.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
@@ -7197,11 +7229,11 @@ mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 QueenNilu.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nNobody is allowed to use bad words in this group, one who uses will be kicked immediately!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!antiToxic) return m.reply('Already deactivated')
+if (!anitbad) return m.reply('Already deactivated')
 let off = nttoxic.indexOf(from)
 nttoxic.splice(off, 1)
-fs.writeFileSync('./database/antitoxic.json', JSON.stringify(nttoxic))
-m.reply('Success in turning off antitoxic in this group')
+fs.writeFileSync('./database/BAD_WORD.json', JSON.stringify(nttoxic))
+m.reply('Success in turning off anitbad in this group')
 } else {
   let buttonsnttoxic= [
   { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
