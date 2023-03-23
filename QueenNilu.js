@@ -11848,7 +11848,7 @@ case 'attp' :{
    break
    case 'attp2' :{
    if (!text) return reply ('Need some word \n ex - attp Mr janiya')
-   const Stik = `https://my-shinz.herokuapp.com/api/maker/attp?text=${text}`
+   const Stik = `https://api.xteam.xyz/ttp?file&text=${text}`
     await QueenNilu.sendMedia(m.chat, Stik , '𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄', '𝙱𝙾𝚃', m, {asSticker: true}).catch((err) => reply(err))
     
    }
