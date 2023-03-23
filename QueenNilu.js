@@ -1046,7 +1046,51 @@ sections
                 }
                 break
 
-
+                case 'vpn' :    case 'feeinternet': case 'v2ray' :  {
+                    await QueenNilu.sendMessage(from, { react: { text: `💉`, key: m.key }})
+                        const sections =[
+                                                                 {
+                                                                     "title": `● ᴀᴘᴋ ꜰᴏʀ ᴛʜᴇ ꜰʀᴇᴇ ɪɴᴛᴇʀɴᴇᴛ ● `,
+                                                                     "rows": [
+                                                                         {
+                                                                             "title": "⛱️ ʜᴛᴛᴘ ɪɴᴊᴇᴄᴛᴏʀ",
+                                                                             "description": "ehi ,ssh can use",
+                                                                             "rowId": `httpinjector`
+                                                                         },
+                                                                         {
+                                                                             "title": "🚀 ᴀʟᴘʜᴀ ᴠ2ʀᴀʏ",
+                                                                             "description": "V2ray app .alpha files can use",
+                                                                             "rowId": `alphav2ray`
+                                                                         }
+                                                                     ]
+                                                                 },
+                                                                 {
+                                                                    "title": "● ᴇʜɪ ꜰɪʟᴇꜱ ᴀɴᴅ ᴠ2ʀᴀʏ ꜰɪʟᴇꜱ ●",
+                                                                    "rows": [
+                                                                        {
+                                                                            "title": "🐼 ᴇʜɪ ꜰɪʟᴇꜱ",
+                                                                            "description": "Ehi files for http injector " ,
+                                                                            "rowId": `niluehi`
+                                                                        },
+                                                                        {
+                                                                            "title": "🐋 ᴠ2ʀᴀʏ .ᴀᴘʟʜᴀ ꜰɪʟᴇꜱ",
+                                                                            "description": "alpha configs for alpha v2ray" ,
+                                                                            "rowId": ``
+                                                                        }
+                                                                    ]
+                                                                 }
+                                           ]
+                    const listMessage = {
+                      text: "*⛱️𝚂𝙴𝙻𝙴𝙲𝚃 𝚈𝙾𝚄𝚁 𝚏𝚒𝚕𝚎𝚜*\n\nAvailable servers\n\n•Singpour 🇸🇬\n• United States 🇱🇷\n\n🐼 Ehi files credits goes to t.me/vpn_stock_bot\n🤹‍♂️ ©ᴊᴀɴɪʏᴀ",
+                      footer: `ǫᴜᴇᴇɴ ɴɪʟᴜ`,
+                      title: `Hi 👋 ${pushname}`,
+                      buttonText: "Click Here",
+                      sections
+                    }
+                    const sendMsg = await QueenNilu.sendMessage(m.chat, listMessage,{ react: { text: `👋`, key: m.key }})
+                    }
+                    break
+    
 
 
               case 'niluehi': {
@@ -1080,7 +1124,7 @@ sections
                             }
                             break
               
-                            case 'ehi' :  {
+                            case 'ehi1' :  {
                               const buffer = await getBuffer('https://te.legra.ph/file/57c7bd5c8b26430634a40.jpg')
                               const link = 'http://youtube.com/c/Janithsadanuwan'
                               
