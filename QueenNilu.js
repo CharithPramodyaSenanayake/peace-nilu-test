@@ -9812,10 +9812,7 @@ break
 	    let setting = global.db.data.settings[botNumber]
 	    if (new Date() * 1 - setting.status > 1000) {
 		let uptime = await runtime(process.uptime())
-		
-		const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
-           var utch = new Date().toLocaleDateString( get_localized_date)
-           var time = new Date().toLocaleString('HI', { timeZone: 'Asia/Colombo' }).split(' ')[1]
+
            const biography = '📅 ' + utch + '\n⌚ ' + time + '\n\n'+QueenNilu.user.name
 
       
@@ -9965,6 +9962,31 @@ case 'twiter' : case 'insta': case 'igvid' : case 'fb': case 'get': {
             }		
 
 			break
+
+
+/////////////////////////////////SETTINGSSS///////
+
+case 'welcome': {
+    if (!m.isGroup) throw mess.group
+    if (!isAdmins)  throw mess.admin
+    if (args[0] === "on") {
+    if (db.chats[m.chat].isWelcome) return reply(`*Welcome already on okay*`)
+    db.chats[m.chat].isWelcome = true
+    reply(`*welcome on*`)
+    } else if (args[0] === "off") {
+    if (!db.chats[m.chat].isWelcome) return reply(`*Already off okay*`)
+    db.chats[m.chat].isWelcome = false
+    reply(`*welcome off*`)
+    } else {
+     let drips = [
+    { buttonId: `${command} on`, buttonText: { displayText: 'ON' }, type: 1 },
+    { buttonId: `${command} off`, buttonText: { displayText: 'OFF' }, type: 1 }
+      ]
+      await QueenNilu.sendButtonText(m.chat, drips, `*┃🔏ᴡᴇʟᴄᴏᴍᴇ ᴍᴏᴅᴇ🔏┃**`, QueenNilu.user.name, m)
+    }
+      }   
+
+            break
 
 ////////////////////SEttings menu 
 
