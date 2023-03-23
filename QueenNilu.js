@@ -1203,7 +1203,46 @@ sections
 
                  break
                 
-                 case 'aboutehi' :{
+                                  case 'aboutehi' :{
+                    var ABOUTEHI = ''
+                    if (global.LANG == 'EN') ABOUTEHI = ` *
+                    ╔═══❨💃 Qᴜᴇᴇɴ ɴɪʟᴜ 💃 ❩═══╗
+                            
+                    🎗️ ǫᴜᴇᴇɴ ɴɪʟᴜ ᴇʜɪ 🎗️
+                   
+                     _▫ ғʀᴇᴇ ᴇʜɪ_
+                     _▫ ᴍᴀᴋᴇ ᴅᴀᴛᴇ_
+                     _▫ ᴇxᴘɪʀᴇ ᴅᴀᴛᴇ_
+                                                    
+                     _✕ ɴᴏ ʜᴀᴄᴋɪɴɢ
+                     _✕ ɴᴏ sᴘᴀᴍ 
+                     _✕ ɴᴏ ᴅᴅᴏs
+                     _✕ ᴅᴏɴ'ᴛ ᴜsᴇ ᴜɴɴᴇᴄᴇssᴀʀʏ ᴡᴏʀᴋ_
+                                
+                   *ᴇɴᴊᴏʏ ʏᴏᴜʀ ᴇʜɪ ғɪʟᴇs💞*
+                   
+                   ᴊᴀɴɪʏᴀ © 202`
+                    if (global.LANG == 'SI') ABOUTEHI = `
+                    ╔═══❨💃 Qᴜᴇᴇɴ ɴɪʟᴜ 💃 ❩═══╗
+                            
+                    🎗️ ǫᴜᴇᴇɴ ɴɪʟᴜ ᴇʜɪ 🎗️
+                   
+                     ▫ ғʀᴇᴇ ᴇʜɪ
+                     ▫ ᴍᴀᴋᴇ ᴅᴀᴛᴇ
+                     ▫ ᴇxᴘɪʀᴇ ᴅᴀᴛᴇ 
+                                                    
+                     ✕ ɴᴏ ʜᴀᴄᴋɪɴɢ_
+                   ✕ ɴᴏ sᴘᴀᴍ 
+                    ✕ ɴᴏ ᴅᴅᴏs
+                    ✕ ᴅᴏɴ'ᴛ ᴜsᴇ ᴜɴɴᴇᴄᴇssᴀʀʏ ᴡᴏʀᴋ_
+                                
+                   ᴇɴᴊᴏʏ ʏᴏᴜʀ ᴇʜɪ ғɪʟᴇs 💞.
+                   
+                   ᴊᴀɴɪʏᴀ © 202`
+                    reply (ABOUTEHI)
+                    }
+                    break 
+                 case 'aboutehi1' :{
                     var ABOUTEHI = ''
                     if (global.LANG == 'EN') ABOUTEHI = ` *Ehi file is*,
                      💬 It is a method where you can get free internet by using whatsapp package.
