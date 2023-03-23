@@ -1010,14 +1010,19 @@ sections
                                                                  ]
                                                              },
                                                              {
-                                                                 "title": "● ᴏᴡɴᴇʀ ᴢᴏɴᴇ ●",
-                                                                 "rows": [
-                                                                     {
-                                                                         "title": "🗣️ ᴏᴡɴᴇʀ ᴄᴏᴍᴍᴀɴᴅꜱ",
-                                                                         "description": Lang.OWNER_CMD ,
-                                                                         "rowId": `${prefix}ownermenu`
-                                                                     }
-                                                                 ]
+                                                                "title": "● ᴇʜɪ ꜰɪʟᴇꜱ ᴀɴᴅ ᴠ2ʀᴀʏ ꜰɪʟᴇꜱ ●",
+                                                                "rows": [
+                                                                    {
+                                                                        "title": "🐼 ᴇʜɪ ꜰɪʟᴇꜱ",
+                                                                        "description": "Ehi files for http injector " ,
+                                                                        "rowId": `niluehi`
+                                                                    },
+                                                                    {
+                                                                        "title": "🐋 ᴠ2ʀᴀʏ .ᴀᴘʟʜᴀ ꜰɪʟᴇꜱ",
+                                                                        "description": "alpha configs for alpha v2ray" ,
+                                                                        "rowId": `${prefix}ownermenu`
+                                                                    }
+                                                                ]
                                                              },
                                                              {
                                                                  "title": "● ǫᴜᴇᴇɴ ɴɪʟᴜ ʙᴏᴛ ᴍᴅ ᴠ2 ●",
