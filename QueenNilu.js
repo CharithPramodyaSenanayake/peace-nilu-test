@@ -95,19 +95,6 @@ let vote = db.data.others.vote = []
 let premium = JSON.parse(fs.readFileSync('./database/user/premium.json'));
 let banned = JSON.parse(fs.readFileSync('./database/user/banned.json'));
 let autosticker = JSON.parse(fs.readFileSync('./database/AUTO/sticker.json'));
-let ntnsfw = JSON.parse(fs.readFileSync('./database/nsfw.json'));
-let ntvirtex = JSON.parse(fs.readFileSync('./database/antivirus.json'));
-let nttoxic = JSON.parse(fs.readFileSync('./database/antitoxic.json'));
-let ntwame = JSON.parse(fs.readFileSync('./database/antiwame.json'));
-let ntlinkgc =JSON.parse(fs.readFileSync('./database/antilinkgc.json'));
-let ntilinkall =JSON.parse(fs.readFileSync('./database/antilinkall.json'));
-let ntilinktwt =JSON.parse(fs.readFileSync('./database/antilinktwitter.json'));
-let ntilinktt =JSON.parse(fs.readFileSync('./database/antilinktiktok.json'));
-let ntilinktg =JSON.parse(fs.readFileSync('./database/antilinktelegram.json'));
-let ntilinkfb =JSON.parse(fs.readFileSync('./database/antilinkfacebook.json'));
-let ntilinkig =JSON.parse(fs.readFileSync('./database/antilinkinstagram.json'));
-let ntilinkytch =JSON.parse(fs.readFileSync('./database/antilinkytchannel.json'));
-let ntilinkytvid =JSON.parse(fs.readFileSync('./database/antilinkytvideo.json'));
 let bad = JSON.parse(fs.readFileSync('./database/BAD_WORD.json'));
 
  
