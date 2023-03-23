@@ -9473,7 +9473,7 @@ if (!text) return m.reply(`_Name a Series or movie`)
             break
             // AUTO MASSAGE REPLY REACT🐣
 
-     if (global.AUTO_REACT == 'true' ) {
+     if (global.AUTO_REACT = 'true' ) {
 		//const sudoo = HELPERS.split(',')
 		const Sudooo = [HELPERS].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
 		if (Sudooo){
