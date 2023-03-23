@@ -184,7 +184,7 @@ if (cek == null) return null
         const groupOwner = m.isGroup ? groupMetadata.owner : ''
         const isGroupOwner = m.isGroup ? (groupOwner ? groupOwner : groupAdmins).includes(m.sender) : false
 	    const isBan = banned.includes(m.sender)
-        const isPremium =  isCreator || global.premium.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) || false
+        const isPremium = premium.includes(m.sender)
         const isAutoSticker = m.isGroup ? autosticker.includes(from) : false
         const anitbad = m.isGroup ? nttoxic.includes(from) : false
         const Autoreply = m.isGroup ? autorep.includes(from) : false
