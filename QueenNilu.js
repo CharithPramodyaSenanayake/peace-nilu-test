@@ -2243,7 +2243,7 @@ break
          break 
 	case 'smeme': case 'stickermeme': case 'stickmeme': {
 let { TelegraPh } = require('./lib/uploader')
-if (!text) return m.reply(`Send/Reply Photo With Caption ${prefix + command} *text*`)
+if (!text) return m.reply(`Senstickerd/Reply Photo With Caption ${prefix + command} *text*`)
 if (text.includes('|')) return m.reply(`Send/Reply Photo With Caption ${prefix + command} *text*`)
 if (!/image/.test(mime)) return m.reply(`Send/Reply Photo With Caption ${prefix + command} *text*`)
 m.reply(mess.wait)
@@ -6920,7 +6920,7 @@ m.reply('Success in turning off all antilink in this group')
   case 'hi': case 'hai' : case 'හායි': {
              
     if (global.VOICE_REPLY == 'true') {
-    await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/Dragonxjanith/UPLOADS/raw/main/VOICE/hi.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
+    await QueenNilu.sendMessage(m.chat, { audio: {url:'https://github.com/Dragonxjanith/UPLOADS/raw/main/VOICE/hi.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
     }
     }
     break
@@ -6931,35 +6931,35 @@ m.reply('Success in turning off all antilink in this group')
     break
     case 'mk': case 'මොකද කරන්නේ' :{
     if (global.VOICE_REPLY == 'true') {
-    await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/Dragonxjanith/UPLOADS/raw/main/VOICE/mokuthna.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
+    await QueenNilu.sendMessage(m.chat, { audio: {url:'https://github.com/Dragonxjanith/UPLOADS/raw/main/VOICE/mokuthna.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
     }
     }
     break
     
     case 'gn': case 'night' :{
     if (global.VOICE_REPLY == 'true') {
-    await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/Dragonxjanith/UPLOADS/raw/main/VOICE/bs.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
+    await QueenNilu.sendMessage(m.chat, { audio: {url:'https://github.com/Dragonxjanith/UPLOADS/raw/main/VOICE/bs.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
     }
     }
     break
     
     case 'bs': {
     if (global.VOICE_REPLY == 'true') {
-    await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/Dragonxjanith/UPLOADS/raw/main/VOICE/bs.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
+    await QueenNilu.sendMessage(m.chat, { audio: {url:'https://github.com/Dragonxjanith/UPLOADS/raw/main/VOICE/bs.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
     }
     }
     break
     
     case 'gm': case 'morning' :{
     if (global.VOICE_REPLY == 'true') {
-    await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/Dragonxjanith/UPLOADS/raw/main/VOICE/gm.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
+    await QueenNilu.sendMessage(m.chat, { audio: {url:'https://github.com/Dragonxjanith/UPLOADS/raw/main/VOICE/gm.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
     }
     }
     break
     
     case 'hmm' :case 'බායි' :{
     if (global.VOICE_REPLY == 'true') {
-    await ElisaBotMd.sendMessage(m.chat, { audio: {url:'https://github.com/Dragonxjanith/UPLOADS/raw/main/VOICE/hmm.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
+    await QueenNilu.sendMessage(m.chat, { audio: {url:'https://github.com/Dragonxjanith/UPLOADS/raw/main/VOICE/hmm.mp3'}, mimetype: 'audio/mp4', ptt: true }, { quoted: m })   
     }
     }
     break
@@ -9408,13 +9408,13 @@ if (!text) return m.reply(`_Name a Series or movie`)
 for (let anji of sticker){
     if (budy.toLowerCase() === anji){
         result = fs.readFileSync(`./Media/sticker/${anji}.webp`)
-        ElisaBotMd.sendMessage(m.chat, { sticker: result }, { quoted: m })
+        QueenNilu.sendMessage(m.chat, { sticker: result }, { quoted: m })
         }
 }
 for (let anju of audio){
     if (budy.toLowerCase() === anju){
         result = fs.readFileSync(`./Media/audio/${anju}.mp3`)
-        ElisaBotMd.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
+        QueenNilu.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
         }
 }
 
