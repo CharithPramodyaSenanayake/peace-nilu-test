@@ -96,7 +96,7 @@ let premium = JSON.parse(fs.readFileSync('./database/user/premium.json'));
 let banned = JSON.parse(fs.readFileSync('./database/user/banned.json'));
 let autosticker = JSON.parse(fs.readFileSync('./database/AUTO/sticker.json'));
 let bad = JSON.parse(fs.readFileSync('./database/BAD_WORD.json'));
-
+let autorep =JSON.parse(fs.readFileSync('./database/autoreply.json'));
  
 //database virus and whatsapp bugs
 //warrrrrrrrr
@@ -199,6 +199,7 @@ if (cek == null) return null
         const AntiLinkAll = m.isGroup ? ntilinkall.includes(from) : false
         const antiWame = m.isGroup ? ntwame.includes(from) : false
         const antiToxic = m.isGroup ? nttoxic.includes(from) : false
+        const Autoreply = m.isGroup ? autorep.includes(from) : false
         const solot = [
 		'🍊 : 🍒 : 🍐',
 		'🍒 : 🔔 : 🍊',
@@ -9949,7 +9950,38 @@ case 'twiter' : case 'insta': case 'igvid' : case 'fb': case 'get': {
             }		
 
 			break
-
+            break
+            case 'autoreply': {
+            if (!m.isGroup) return m.reply(mess.group)
+            if (!isBotAdmins) return m.reply(mess.botAdmin)
+            if (!isAdmins && !isCreator) return m.reply(mess.admin)
+            if (args[0] === "on") {
+            if (Autoreply) return m.reply('Already activated')
+            autorep.push(from)
+            fs.writeFileSync('./database/autoreply.json', JSON.stringify(autorep))
+            m.reply('Success in turning on auto reply in this group')
+            var groupe = await QueenNilu.groupMetadata(from)
+            var members = groupe['participants']
+            var mems = []
+            members.map(async adm => {
+            mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
+            })
+            QueenNilu.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nAuto reply has been enabled in this group, means bot may send unnecessary voice note!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+            } else if (args[0] === "off") {
+            if (!Autoreply) return m.reply('Already deactivated')
+            let off = autorep.indexOf(from)
+            autorep.splice(off, 1)
+            fs.writeFileSync('./database/autoreply.json', JSON.stringify(autorep))
+            m.reply('Success in turning off auto reply in this group')
+            } else {
+              let buttonsnttoxic= [
+              { buttonId: `${command} on`, buttonText: { displayText: 'On' }, type: 1 },
+              { buttonId: `${command} off`, buttonText: { displayText: 'Off' }, type: 1 }
+              ]
+              await QueenNilu.sendButtonText(m.chat, buttonsnttoxic, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.botname}`, m)
+              }
+              }
+              break
 
 /////////////////////////////////SETTINGSSS///////
 
