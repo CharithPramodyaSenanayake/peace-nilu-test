@@ -1046,7 +1046,7 @@ sections
                 }
                 break
 
-                case 'vpn' :    case 'feeinternet': case 'v2ray' :  {
+                case 'ehifiles'  :  {
                     await QueenNilu.sendMessage(from, { react: { text: `💉`, key: m.key }})
                         const sections =[
                                                                  {
@@ -1078,15 +1078,25 @@ sections
                                                                     "title": "🇸🇬 ꜱɪɴɢᴘᴏᴜʀ",
                                                                     "rows": [
                                                                         {
-                                                                            "title": "🐼 ᴇʜɪ ꜰɪʟᴇꜱ",
-                                                                            "description": "Ehi files for http injector " ,
-                                                                            "rowId": `niluehi`
+                                                                            "title": "🔮 ᴢᴏᴏᴍ",
+                                                                            "description": "zoom ehi files",
+                                                                            "rowId": `httpinjector`
                                                                         },
                                                                         {
-                                                                            "title": "🐋 ᴠ2ʀᴀʏ .ᴀᴘʟʜᴀ ꜰɪʟᴇꜱ",
-                                                                            "description": "alpha configs for alpha v2ray" ,
-                                                                            "rowId": ``
-                                                                        }
+                                                                            "title": "🍀 ᴡʜᴀᴛꜱᴀᴘᴘ",
+                                                                            "description": "whatsapp ehi files",
+                                                                            "rowId": `alphav2ray`
+                                                                        },
+                                                                        {
+                                                                           "title": "🏓 ꜰᴀᴄᴇʙᴏᴏᴋ",
+                                                                           "description": "Facebook ehi files",
+                                                                           "rowId": `alphav2ray`
+                                                                       },
+                                                                       {
+                                                                           "title": "🥊 ʏᴏᴜᴛᴜʙᴇ",
+                                                                           "description": "Youtube ehi files",
+                                                                           "rowId": `alphav2ray`
+                                                                       }
                                                                     ]
                                                                  }
                                            ]
