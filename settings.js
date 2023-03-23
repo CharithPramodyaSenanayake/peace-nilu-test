@@ -27,7 +27,7 @@ BOT SETTINGS
 //Language English = 'EN' , Sinhala = 'SI' , Tamil= 'TL'
 global.LANG = 'EN'
 
-global.READ_MASSAGE = false
+global.READ_MASSAGE = true
 // enable desable Girls Voice Reply
 global.VOICE_REPLY = true
 // Do you want show time on your bio use "true" want desable use "false"
