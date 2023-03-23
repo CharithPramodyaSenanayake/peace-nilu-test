@@ -184,19 +184,8 @@ if (cek == null) return null
         const groupOwner = m.isGroup ? groupMetadata.owner : ''
         const isGroupOwner = m.isGroup ? (groupOwner ? groupOwner : groupAdmins).includes(m.sender) : false
 	    const isBan = banned.includes(m.sender)
-        const isPremium = premium.includes(m.sender)
+        const isPremium =  isCreator || global.premium.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) || false
         const isAutoSticker = m.isGroup ? autosticker.includes(from) : false
-        const antiVirtex = m.isGroup ? ntvirtex.includes(from) : false
-        const Antilinkgc = m.isGroup ? ntlinkgc.includes(m.chat) : false
-        const AntiLinkYoutubeVid = m.isGroup ? ntilinkytvid.includes(from) : false
-        const AntiLinkYoutubeChannel = m.isGroup ? ntilinkytch.includes(from) : false
-        const AntiLinkInstagram = m.isGroup ? ntilinkig.includes(from) : false
-        const AntiLinkFacebook = m.isGroup ? ntilinkfb.includes(from) : false
-        const AntiLinkTiktok = m.isGroup ? ntilinktt.includes(from) : false
-        const AntiLinkTelegram = m.isGroup ? ntilinktg.includes(from) : false
-        const AntiLinkTwitter = m.isGroup ? ntilinktwt.includes(from) : false
-        const AntiLinkAll = m.isGroup ? ntilinkall.includes(from) : false
-        const antiWame = m.isGroup ? ntwame.includes(from) : false
         const anitbad = m.isGroup ? nttoxic.includes(from) : false
         const Autoreply = m.isGroup ? autorep.includes(from) : false
         const solot = [
@@ -423,7 +412,7 @@ let buttonMessage = {
         }
         
         // Anti Link
-        if (Antilinkgc) {
+        if (global.antilink == 'true' && m.isGroup ) {
         if (budy.match(`chat.whatsapp.com`)) {
         if (!isBotAdmins) return m.reply(`${mess.botAdmin}, to kick the person who send link`)
         let gclink = (`https://chat.whatsapp.com/`+await QueenNilu.groupInviteCode(m.chat))
@@ -446,67 +435,7 @@ let buttonMessage = {
             }            
         }
         
-          // Antiwame by xeon
-  if (antiWame)
-  if (budy.includes(`Wa.me`)) {
-if (!isBotAdmins) return
-bvl = `\`\`\`「 Wa.me Link Detected 」\`\`\`\n\nAdmin has sent a wa.me link, admin is free to send any link😇`
-if (isAdmins) return m.reply(bvl)
-if (m.key.fromMe) return m.reply(bvl)
-if (isCreator) return m.reply(bvl)
-kice = m.sender
-        await QueenNilu.sendMessage(m.chat,
-			    {
-			        delete: {
-			            remoteJid: m.chat,
-			            fromMe: false,
-			            id: m.key.id,
-			            participant: m.key.participant
-			        }
-			    })
-			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-QueenNilu.sendMessage(from, {text:`\`\`\`「 Wa.me Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} Has been kicked because of sending wa.me link in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
-} else {
-}
-  if (antiWame)
-  if (budy.includes(`http://wa.me`)) {
-if (!isBotAdmins) return
-bvl = `\`\`\`「 Wa.me Link Detected 」\`\`\`\n\nAdmin has sent a wa.me link, admin is free to send any link😇`
-if (isAdmins) return m.reply(bvl)
-if (m.key.fromMe) return m.reply(bvl)
-if (isCreator) return m.reply(bvl)
-kice = m.sender
-        await QueenNilu.sendMessage(m.chat,
-			    {
-			        delete: {
-			            remoteJid: m.chat,
-			            fromMe: false,
-			            id: m.key.id,
-			            participant: m.key.participant
-			        }
-			    })
-			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-QueenNilu.sendMessage(from, {text:`\`\`\`「 Wa.me Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} Has been kicked because of sending wa.me link in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
-} else {
-}
-//antivirtex by xeon
-  if (antiVirtex) {
-  if (budy.length > 3500) {
-  if (!isBotAdmins) return m.reply(mess.botAdmin)
-          await QueenNilu.sendMessage(m.chat,
-			    {
-			        delete: {
-			            remoteJid: m.chat,
-			            fromMe: false,
-			            id: m.key.id,
-			            participant: m.key.participant
-			        }
-			    })
-			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-			QueenNilu.sendMessage(from, {text:`\`\`\`「 Virus Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending virus in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
-  }
-  }
-  
+          
 //anti bad words by xeon
 if (antibadword)
 if (bad.includes(messagesD)) {
@@ -530,192 +459,6 @@ if (isCreator) return m.reply(bvl)
 			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
 QueenNilu.sendMessage(from, {text:`\`\`\`「 Bad Word Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} was kicked because of using bad words in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})}
 }
-//antilink youtube video by xeon
-if (AntiLinkYoutubeVid)
-if (budy.includes("https://youtu.be/")){
-if (!isBotAdmins) return
-bvl = `\`\`\`「 YoutTube Video Link Detected 」\`\`\`\n\nAdmin has sent a youtube video link, admin is free to send any link😇`
-if (isAdmins) return m.reply(bvl)
-if (m.key.fromMe) return m.reply(bvl)
-if (isCreator) return m.reply(bvl)
-        await QueenNilu.sendMessage(m.chat,
-			    {
-			        delete: {
-			            remoteJid: m.chat,
-			            fromMe: false,
-			            id: m.key.id,
-			            participant: m.key.participant
-			        }
-			    })
-			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-QueenNilu.sendMessage(from, {text:`\`\`\`「 YouTube Video Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending youtube video link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
-} else {
-}
-//antilink youtube channel by xeon
-if (AntiLinkYoutubeChannel)
-   if (budy.includes("https://youtube.com/")){
-if (!isBotAdmins) return
-bvl = `\`\`\`「 YoutTube Channel Link Detected 」\`\`\`\n\nAdmin has sent a youtube channel link, admin is free to send any link😇`
-if (isAdmins) return m.reply(bvl)
-if (m.key.fromMe) return m.reply(bvl)
-if (isCreator) return m.reply(bvl)
-        await QueenNilu.sendMessage(m.chat,
-			    {
-			        delete: {
-			            remoteJid: m.chat,
-			            fromMe: false,
-			            id: m.key.id,
-			            participant: m.key.participant
-			        }
-			    })
-			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-QueenNilu.sendMessage(from, {text:`\`\`\`「 YouTube Channel Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending youtube channel link in this group`, contextInfo:{mentionedJid:[m.sendet]}}, {quoted:m})
-} else {
-}
-//antilink instagram by xeon
-if (AntiLinkInstagram)
-   if (budy.includes("https://www.instagram.com/")){
-if (!isBotAdmins) return
-bvl = `\`\`\`「 Instagram Link Detected 」\`\`\`\n\nAdmin has sent a instagram link, admin is free to send any link😇`
-if (isAdmins) return m.reply(bvl)
-if (m.key.fromMe) return m.reply(bvl)
-if (isCreator) return m.reply(bvl)
-        await QueenNilu.sendMessage(m.chat,
-			    {
-			        delete: {
-			            remoteJid: m.chat,
-			            fromMe: false,
-			            id: m.key.id,
-			            participant: m.key.participant
-			        }
-			    })
-			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-QueenNilu.sendMessage(from, {text:`\`\`\`「 Instagram Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending instagram link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
-} else {
-}
-//antilink facebook by xeon
-if (AntiLinkFacebook)
-   if (budy.includes("https://facebook.com/")){
-if (!isBotAdmins) return
-bvl = `\`\`\`「 Facebook Link Detected 」\`\`\`\n\nAdmin has sent a facebook link, admin is free to send any link😇`
-if (isAdmins) return m.reply(bvl)
-if (m.key.fromMe) return m.reply(bvl)
-if (isCreator) return m.reply(bvl)
-        await QueenNilu.sendMessage(m.chat,
-			    {
-			        delete: {
-			            remoteJid: m.chat,
-			            fromMe: false,
-			            id: m.key.id,
-			            participant: m.key.participant
-			        }
-			    })
-			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-QueenNilu.sendMessage(from, {text:`\`\`\`「 Facebook Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending facebook link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
-} else {
-}
-//antilink telegram by xeon
-if (AntiLinkTelegram)
-   if (budy.includes("https://t.me/")){
-if (AntiLinkTelegram)
-if (!isBotAdmins) return
-bvl = `\`\`\`「 Telegram Link Detected 」\`\`\`\n\nAdmin has sent a telegram link, admin is free to send any link😇`
-if (isAdmins) return m.reply(bvl)
-if (m.key.fromMe) return m.reply(bvl)
-if (isCreator) return m.reply(bvl)
-        await QueenNilu.sendMessage(m.chat,
-			    {
-			        delete: {
-			            remoteJid: m.chat,
-			            fromMe: false,
-			            id: m.key.id,
-			            participant: m.key.participant
-			        }
-			    })
-			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-QueenNilu.sendMessage(from, {text:`\`\`\`「 Telegram Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending telegram link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
-} else {
-}
-//antilink tiktok by xeon
-if (AntiLinkTiktok)
-   if (budy.includes("https://www.tiktok.com/")){
-if (!isBotAdmins) return
-bvl = `\`\`\`「 Tiktok Link Detected 」\`\`\`\n\nAdmin has sent a tiktok link, admin is free to send any link😇`
-if (isAdmins) return m.reply(bvl)
-if (m.key.fromMe) return m.reply(bvl)
-if (isCreator) return m.reply(bvl)
-        await QueenNilu.sendMessage(m.chat,
-			    {
-			        delete: {
-			            remoteJid: m.chat,
-			            fromMe: false,
-			            id: m.key.id,
-			            participant: m.key.participant
-			        }
-			    })
-			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-QueenNilu.sendMessage(from, {text:`\`\`\`「 Tiktok Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending tiktok link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
-} else {
-}
-//antilink twitter by xeon
-if (AntiLinkTwitter)
-   if (budy.includes("https://twitter.com/")){
-if (!isBotAdmins) return
-bvl = `\`\`\`「 Twitter Link Detected 」\`\`\`\n\nAdmin has sent a twitter link, admin is free to send any link😇`
-if (isAdmins) return m.reply(bvl)
-if (m.key.fromMe) return m.reply(bvl)
-if (isCreator) return m.reply(bvl)
-        await QueenNilu.sendMessage(m.chat,
-			    {
-			        delete: {
-			            remoteJid: m.chat,
-			            fromMe: false,
-			            id: m.key.id,
-			            participant: m.key.participant
-			        }
-			    })
-			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-QueenNilu.sendMessage(from, {text:`\`\`\`「 Tiktok Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending twitter link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
-} else {
-}
-
-/// AUTO STICKER COSTEM SEND \\\
-
-for (let anji of sticker){
-    if (budy.toLowerCase() === anji){
-        result = fs.readFileSync(`./Media/sticker/${anji}.webp`)
-        QueenNilu.sendMessage(m.chat, { sticker: result }, { quoted: m })
-        }
-}
-for (let anju of audio){
-    if (budy.toLowerCase() === anju){
-        result = fs.readFileSync(`./Media/audio/${anju}.mp3`)
-        QueenNilu.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
-        }
-}
-
-//antilink all by xeon
-if (AntiLinkAll)
-   if (budy.includes("https://")){
-if (!isBotAdmins) return
-bvl = `\`\`\`「 Link Detected 」\`\`\`\n\nAdmin has sent a link, admin is free to send any link😇`
-if (isAdmins) return m.reply(bvl)
-if (m.key.fromMe) return m.reply(bvl)
-if (isCreator) return m.reply(bvl)
-        await QueenNilu.sendMessage(m.chat,
-			    {
-			        delete: {
-			            remoteJid: m.chat,
-			            fromMe: false,
-			            id: m.key.id,
-			            participant: m.key.participant
-			        }
-			    })
-			QueenNilu.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-QueenNilu.sendMessage(from, {text:`\`\`\`「 Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
-} else {
-}
-
 
 
       // Mute Chat
@@ -1038,6 +781,27 @@ Type *surrender* to surrender and admit defeat`
             }
             }
             break
+            case 'antiwame': {
+                if (!m.isGroup) throw mess.group
+                if (!isBotAdmins) throw mess.botAdmin
+                if (!isAdmins) throw mess.admin
+                if (args[0] === "on") {
+                if (db.chats[m.chat].wame) return m.reply(`Already Activated`)
+                db.chats[m.chat].wame = true
+                m.reply(`Anti Wa.me Activated!`)
+                } else if (args[0] === "off") {
+                if (!db.chats[m.chat].wame) return m.reply(`Already deactivated`)
+                db.chats[m.chat].wame = false
+                m.reply(`Anti Wa.me is not activated!`)
+                } else {
+                 let buttons = [
+                        { buttonId: 'antiwame on', buttonText: { displayText: 'ON' }, type: 1 },
+                        { buttonId: 'antiwame off', buttonText: { displayText: 'OFF' }, type: 1 }
+                    ]
+                    await QueenNilu.sendButtonText(m.chat, buttons, `Mode Anti Wa.me`, QueenNilu.user.name, m)
+                }
+             }
+             break
 /////////////////////////////////////////FUNCTIUONSMY ------------------------------------------------------
 
 
