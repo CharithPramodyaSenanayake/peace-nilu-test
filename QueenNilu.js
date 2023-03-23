@@ -94,7 +94,6 @@ let vote = db.data.others.vote = []
 //read database jid
 let premium = JSON.parse(fs.readFileSync('./database/user/premium.json'));
 let banned = JSON.parse(fs.readFileSync('./database/user/banned.json'));
-let autosticker = JSON.parse(fs.readFileSync('./database/AUTO/sticker.json'));
 let bad = JSON.parse(fs.readFileSync('./database/BAD_WORD.json'));
 let autorep =JSON.parse(fs.readFileSync('./database/autoreply.json'));
  
@@ -105,10 +104,7 @@ let autorep =JSON.parse(fs.readFileSync('./database/autoreply.json'));
 let sticker = JSON.parse(fs.readFileSync('./database/AUTO/sticker.json'));
 let audio = JSON.parse(fs.readFileSync('./database/AUTO/audio.json'));
 //database auto reply
-let janiyasticker = JSON.parse(fs.readFileSync('./database/AUTO/sticker.json'));
-let janiyaaudio = JSON.parse(fs.readFileSync('./database/AUTO/audio.json'));
-let janiyaimage = JSON.parse(fs.readFileSync('./database/AUTO/image.json'));
-let janiyavideo = JSON.parse(fs.readFileSync('./database/AUTO/video.json'));
+
 
 module.exports = QueenNilu = async (QueenNilu, m, chatUpdate, store) => {
     try {
@@ -184,7 +180,7 @@ if (cek == null) return null
         const isGroupOwner = m.isGroup ? (groupOwner ? groupOwner : groupAdmins).includes(m.sender) : false
 	    const isBan = banned.includes(m.sender)
         const isPremium = premium.includes(m.sender)
-        const isAutoSticker = m.isGroup ? autosticker.includes(from) : false
+
         const solot = [
 		'🍊 : 🍒 : 🍐',
 		'🍒 : 🔔 : 🍊',
@@ -395,19 +391,7 @@ let buttonMessage = {
    QueenNilu.sendMessage(m.chat, buttonMessage, options)
    }
                 
-        // Autosticker gc
-        if (isAutoSticker) {
-            if (/image/.test(mime) && !/webp/.test(mime)) {
-                let mediac = await quoted.download()
-                await QueenNilu.sendImageAsSticker(from, mediac, m, { packname: global.packname, author: global.author })
-                console.log(`Auto sticker detected`)
-            } else if (/video/.test(mime)) {
-                if ((quoted.msg || quoted).seconds > 11) return
-                let mediac = await quoted.download()
-                await QueenNilu.sendVideoAsSticker(from, mediac, m, { packname: global.packname, author: global.author })
-            }
-        }
-        
+
         // Anti Link
         if (global.antilink == 'true' && m.isGroup ) {
         if (budy.match(`chat.whatsapp.com`)) {
@@ -7229,24 +7213,7 @@ QueenNilu.sendMessage(m.chat, {image: {url: anuoncr2},viewOnce : true},{quoted: 
         }
         }
         break
-case 'autostickergc':
-            case 'autosticker':
-if (!m.isGroup) return m.reply(mess.group)
-if (!isBotAdmins) return m.reply(mess.botAdmin)
-if (!isAdmins && !isCreator) return m.reply(mess.admin)
-if (args.length < 1) return m.reply('type auto sticker on to enable\ntype auto sticker off to disable')
-if (args[0]  === 'on'){
-if (isAutoSticker) return m.reply(`Already activated`)
-autosticker.push(from)
-fs.writeFileSync('./database/autosticker.json', JSON.stringify(autosticker))
-m.reply('autosticker activated')
-} else if (args[0] === 'off'){
-let anuticker1 = autosticker.indexOf(from)
-autosticker.splice(anuticker1, 1)
-fs.writeFileSync('./database/autosticker.json', JSON.stringify(autosticker))
-m.reply('auto sticker deactivated')
-}
-break
+
 case 'antivirus': case 'antivirtex': {
     if (!m.isGroup) return m.reply(mess.group)
     if (!isBotAdmins) return m.reply(mess.botAdmin)
