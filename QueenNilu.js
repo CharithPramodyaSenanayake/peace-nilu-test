@@ -105,7 +105,7 @@ let sticker = JSON.parse(fs.readFileSync('./database/AUTO/sticker.json'));
 let audio = JSON.parse(fs.readFileSync('./database/AUTO/audio.json'));
 
 //database auto reply
-let janiyasticker = JSON.parse(fs.readFileSync('./database/AUTO/sticker.jsonn'));
+let janiyasticker = JSON.parse(fs.readFileSync('./database/AUTO/sticker.json'));
 let janiyaaudio = JSON.parse(fs.readFileSync('./database/AUTO/audio.json'));
 
 module.exports = QueenNilu = async (QueenNilu, m, chatUpdate, store) => {
