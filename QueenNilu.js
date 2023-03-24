@@ -1377,6 +1377,7 @@ Cieeee, What's Going On❤️💖👀`
             //////////////////////////////////////////////  News start \\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
             case 'news' : {
+                await QueenNilu.sendMessage(from, { react: { text: `🗞️`, key: m.key }})
                 const load = await QueenNilu.sendText(m.chat, mess.wait , m, ) 
                 const news = await fetchJson(`https://api.sdbots.tk/hirunews`)
                 const cap = `
