@@ -9567,7 +9567,7 @@ if (!text) return m.reply(`_Name a Series or movie`)
 
      for (let anji of janiyasticker){
         if (budy === anji){
-            result = fs.readFileSync(`./database/AUTO/sticker/${anji}.webp`)
+            result = fs.readFileSync(`./Media/sticker/${anji}.webp`)
             QueenNilu.sendMessage(m.chat, { sticker: result }, { quoted: m })
             }
 }
