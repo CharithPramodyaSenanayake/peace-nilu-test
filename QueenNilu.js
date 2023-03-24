@@ -103,8 +103,10 @@ let autorep =JSON.parse(fs.readFileSync('./database/autoreply.json'));
 //Database\\
 let sticker = JSON.parse(fs.readFileSync('./database/AUTO/sticker.json'));
 let audio = JSON.parse(fs.readFileSync('./database/AUTO/audio.json'));
-//database auto reply
 
+//database auto reply
+let janiyasticker = JSON.parse(fs.readFileSync('./database/AUTO/sticker.jsonn'));
+let janiyaaudio = JSON.parse(fs.readFileSync('./database/AUTO/audio.json'));
 
 module.exports = QueenNilu = async (QueenNilu, m, chatUpdate, store) => {
     try {
@@ -9563,11 +9565,11 @@ if (!text) return m.reply(`_Name a Series or movie`)
      break
      /// AUTO STICKER COSTEM SEND \\\
 
-for (let anji of sticker){
-    if (budy.toLowerCase() === anji){
-        result = fs.readFileSync(`./Media/sticker/${anji}.webp`)
-        QueenNilu.sendMessage(m.chat, { sticker: result }, { quoted: m })
-        }
+     for (let anji of janiyasticker){
+        if (budy === anji){
+            result = fs.readFileSync(`./database/AUTO/sticker/${anji}.webp`)
+            QueenNilu.sendMessage(m.chat, { sticker: result }, { quoted: m })
+            }
 }
 for (let anju of audio){
     if (budy.toLowerCase() === anju){
