@@ -901,48 +901,7 @@ case 'apk':{
                 }
 
               break
-/////////////////movie
 
-case 'film' :{
-    await QueenNilu.sendText(m.chat,mess.wait) 
-    await fetchJson(`https://api.akuari.my.id/search/film?query=${text}`)
-    .then(async (janiya) => {  
-    const search = janiya.hasil
-    let sections = []   
-for (let i of search) {
-const list = {title: `SELECT YOUR Movie`,
-rows: [
-{
- title: `${i.judul}`, 
- rowId: `films ${i.link} ${i.judul}`,
-description: `➮ upload ${i.upload}`	     
-}, 
-]
-}
-sections.push(list)   
-}
-const sendm =  QueenNilu.sendMessage(
-m.chat, 
-{
-text: `${m.pushName} This is matching apk\n\n➮ ʀᴇǫᴜᴇsᴛ ${text}`,
-footer: `${global.botname}`,
-title: "*💃Qᴜᴇᴇɴ ɴɪʟᴜ  💃*",
-buttonText: "search",
-sections
-}, { quoted : m })    
-    }).catch((err) => m.reply(NOT_FOUND))
-    }
-    break
-    case 'films' : {
-      const janiya = await fetchJson(`https://api.akuari.my.id/search/film?query=${args[0]}`)
-    await QueenNilu.sendMessage(m.chat,{ link : janiya.hasil.link }, { quoted: m })
-
-   
-    }
-
-
-
-              break
               //////fb 
 
               case 'jsk' :{
@@ -9441,8 +9400,8 @@ if (!isAdmins && !isCreator) return m.reply(mess.admin)
 QueenNilu.groupRevokeInvite(m.chat)
 }
 break
-case 'imdb':
-if (!text) return m.reply(`_Name a Series or movie`)
+case 'imdb': case 'movie': case 'film':
+if (!text) return m.reply(`_Name a Series or movie_`)
             let fids = await axios.get(`http://www.omdbapi.com/?apikey=742b2d09&t=${text}&plot=full`)
             let imdbt = ""
             console.log(fids.data)
