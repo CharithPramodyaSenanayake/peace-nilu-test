@@ -649,97 +649,7 @@ let docs = pickRandom(documents)
                 m.reply(`${m.pushName} *Already Afk*${text ? ': ' + text : ''}`)
             }
             break	
-                case 'ttc': case 'ttt': case 'tictactoe': {
-            let TicTacToe = require("./lib/tictactoe")
-            this.game = this.game ? this.game : {}
-            if (Object.values(this.game).find(room => room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender))) return m.reply(`You Are Still In The Game`)
-            let room = Object.values(this.game).find(room => room.state === 'WAITING' && (text ? room.name === text : true))
-            if (room) {
-            room.o = m.chat
-            room.game.playerO = m.sender
-            room.state = 'PLAYING'
-            let arr = room.game.render().map(v => {
-            return {
-            X: '❌',
-            O: '⭕',
-            1: '1️⃣',
-            2: '2️⃣',
-            3: '3️⃣',
-            4: '4️⃣',
-            5: '5️⃣',
-            6: '6️⃣',
-            7: '7️⃣',
-            8: '8️⃣',
-            9: '9️⃣',
-            }[v]
-            })
-            let str = `Room ID: ${room.id}
-
-${arr.slice(0, 3).join('')}
-${arr.slice(3, 6).join('')}
-${arr.slice(6).join('')}
-
-Waiting @${room.game.currentTurn.split('@')[0]}
-
-Type *surrender* to surrender and admit defeat`
-            if (room.x !== room.o) await QueenNilu.sendText(room.x, str, m, { mentions: parseMention(str) } )
-            await QueenNilu.sendText(room.o, str, m, { mentions: parseMention(str) } )
-            } else {
-            room = {
-            id: 'tictactoe-' + (+new Date),
-            x: m.chat,
-            o: '',
-            game: new TicTacToe(m.sender, 'o'),
-            state: 'WAITING'
-            }
-            if (text) room.name = text
-            m.reply('Waiting For Partner' + (text ? ` Type The Command Below ${prefix}${command} ${text}` : ''))
-            this.game[room.id] = room
-            }
-            }
-            break
-            case 'delttc': case 'delttt': {
-            this.game = this.game ? this.game : {}
-            try {
-            if (this.game) {
-            delete this.game
-            QueenNilu.sendText(m.chat, `Successfully deleted TicTacToe session`, m)
-            } else if (!this.game) {
-            m.reply(`Session TicTacToe🎮 does not exist`)
-            } else throw '?'
-            } catch (e) {
-            m.reply('damaged')
-            }
-            }
-            break
-            case 'suitpvp':case 'rps': case 'rockpaperscissors':case 'suit': {
-            this.suit = this.suit ? this.suit : {}
-            let poin = 10
-            let poin_lose = 10
-            let timeout = 60000
-            if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.sender))) m.reply(`Complete your previous game`)
-	    if (m.mentionedJid[0] === m.sender) return m.reply(`Can't play with myself !`)
-            if (!m.mentionedJid[0]) return m.reply(`_Who do you want to challenge?_\nTag the person..\n\nExample : ${prefix}suit @${owner[1]}`, m.chat, { mentions: [owner[1] + '@s.whatsapp.net'] })
-            if (Object.values(this.suit).find(roof => roof.id.startsWith('suit') && [roof.p, roof.p2].includes(m.mentionedJid[0]))) throw `The person you are challenging is playing suit with someone else :(`
-            let id = 'suit_' + new Date() * 1
-            let caption = `_*SUIT PvP*_
-
-@${m.sender.split`@`[0]} *Challenged* @${m.mentionedJid[0].split`@`[0]} *to play suit*
-
-*Hi* @${m.mentionedJid[0].split`@`[0]} *Please type accept to accept or type reject to reject`
-            this.suit[id] = {
-            chat: await QueenNilu.sendText(m.chat, caption, m, { mentions: parseMention(caption) }),
-            id: id,
-            p: m.sender,
-            p2: m.mentionedJid[0],
-            status: 'wait',
-            waktu: setTimeout(() => {
-            if (this.suit[id]) QueenNilu.sendText(m.chat, `_Suit time out_`, m)
-            delete this.suit[id]
-            }, 60000), poin, poin_lose, timeout
-            }
-            }
-            break
+              
             case 'antiwame': {
                 if (!m.isGroup) throw mess.group
                 if (!isBotAdmins) throw mess.botAdmin
@@ -761,8 +671,6 @@ Type *surrender* to surrender and admit defeat`
                 }
              }
              break
-/////////////////////////////////////////FUNCTIUONSMY ------------------------------------------------------
-
 
 //---------------------------------------------APK DOWNLOADER -------------------------------
 
@@ -901,54 +809,6 @@ case 'apk':{
                 }
 
               break
-
-              //////fb 
-
-              case 'jsk' :{
-                await QueenNilu.sendText(m.chat,mess.wait) 
-                await fetchJson(`https://api.akuari.my.id/downloader/fbdl3?link=${text}`)
-                .then(async (janiya) => {  
-                const search = janiya.hasil
-                let sections = []   
-            for (let i of search) {
-            const list = {title: `SELECT YOUR Video`,
-            rows: [
-            {
-             title: `HD`, 
-             rowId: `video ${i.url} ${i.title}`,
-            description: ` videoss`	     
-            }, 
-            {
-                title: `sd`, 
-                rowId: `video ${i.url} ${i.title}`,
-               description: ` videoss`	     
-               }, 
-            ]
-            }
- 
-            }
-            const sendm =  QueenNilu.sendMessage(
-            m.chat, 
-            {
-            text: `${m.pushName} This is matching apk\n\n➮ ʀᴇǫᴜᴇsᴛ ${text}`,
-            footer: `${global.botname}`,
-            title: "*💃Qᴜᴇᴇɴ ɴɪʟᴜ  💃*",
-            buttonText: "search",
-            sections
-            }, { quoted : m })    
-                }).catch((err) => m.reply(NOT_FOUND))
-                }
-                break
-                case 'jsk1' : {
-                  const janiya = await fetchJson(`https://api.akuari.my.id/search/film?query=${args[0]}`)
-                await QueenNilu.sendMessage(m.chat,{  video: janiya.hasil.link }, { quoted: m })
-            
-               
-                }
-            
-            
-            
-                          break
 
               ////----------------------------------------EHI STORE ----------------------------------\\\\\
 
@@ -1274,6 +1134,8 @@ case 'apk':{
                         await QueenNilu.sendMessage(from, { react: { text: `🚀`, key: app.key }})
                  }
                  break
+////////////////EHI STORE END \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 
             case'chat': {
                 if (!isCreator) throw mess.owner
@@ -1409,145 +1271,12 @@ Cieeee, What's Going On❤️💖👀`
            }
            break
            
-            case 'news2' : {
-            const load = await QueenNilu.sendText(m.chat, mess.wait , m, )
-                
-            const {esana_scrape, esana_latest_news_id, esana_scrape_from_id} = require("esana-node-api").esana_news;
-            const helnews = await esana_scrape({ fetch: 'latest' , passcode: 'uakdmin_sr_2064'}) // Enter Your Passcode or Contact Admin (+94766239744)
-         
-         const title = helnews.news.helakuru.title
-         const news = helnews.news.helakuru.description
-         const img = helnews.news.helakuru.thumb
-         const url = helnews.news.helakuru.url
-         const date = helnews.news.helakuru.data
-         
-         const cap = `*_🏷️ Title_ ${title}*\n\n*_📄 News_* ${news}\n`
-         const templateButtons = [
-             {index: 1, urlButton: {displayText: `එසැන පුවත්`, url: url }},
-         
-         
-             ]
-         
-         const templateMessage = {
-             image: {url: img },
-             caption: '     ◉ 💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 𝐍𝐄𝐖𝐒 💃 ◉\n\n'+cap,
-             footer: global.botname,
-             templateButtons: templateButtons,
-             headerType: 4
-         }
-              
-              await QueenNilu.sendMessage(m.chat, templateMessage, { quoted: m })
-              await QueenNilu.sendMessage(m.chat,{delete : load.key })  
-                    
-            }
-            break
-            case 'newsjson' : {
-            const {esana_scrape, esana_latest_news_id, esana_scrape_from_id} = require("esana-node-api").esana_news;
-            const all_news = await esana_scrape({ fetch: 'all' , passcode: 'uakdmin_sr_2064'}) // Enter Your Passcode or Contact Admin (+94766239744)
-           // const helnews = await esana_scrape({ fetch: 'latest' , passcode: 'uakdmin_sr_2064'}) // Enter Your Passcode or Contact Admin (+94766239744)
-          //  const helnew_s = await esana_scrape_from_id({ id: text , passcode: 'uakdmin_sr_2064'})
-           const cap = `
-           ${jsonformat(all_news)}
-           `
-         reply(cap)
-         //reply(jsonformat(helnews))
-         //reply(jsonformat(helnew_s))
-            
-            }
-          break
-          case 'newsjson2' : {
-            const {esana_scrape, esana_latest_news_id, esana_scrape_from_id} = require("esana-node-api").esana_news;
-            //const all_news = await esana_scrape({ fetch: 'all' , passcode: 'uakdmin_sr_2064'}) // Enter Your Passcode or Contact Admin (+94766239744)
-           // const helnews = await esana_scrape({ fetch: 'latest' , passcode: 'uakdmin_sr_2064'}) // Enter Your Passcode or Contact Admin (+94766239744)
-            const helnew_s = await esana_scrape_from_id({ id: text , passcode: 'uakdmin_sr_2064'})
-           const cap = `
-           ${jsonformat(helnew_s)}
-           `
-         reply(cap)
-         //reply(jsonformat(helnews))
-         //reply(jsonformat(helnew_s))
-            
-            }
-          break
-            case 'helakurunews' : case 'findnews' : {
-            const load = await QueenNilu.sendText(m.chat, mess.wait , m, )
-         
-            var NEWSSS = ''
-           if (global.LANG == 'EN') NEWSSS = '```💃 Click And Get Your news```'
-           if (global.LANG == 'SI') NEWSSS = '```💃 ඔබට අවශ්‍ය පුවත පහත බටන බාවිතයෙන් ලබාගන්න```'
-         
-            const {esana_scrape, esana_latest_news_id, esana_scrape_from_id} = require("esana-node-api").esana_news;
-            const all_news = await esana_scrape({ fetch: 'all' , passcode: 'uakdmin_sr_2064'}) // Enter Your Passcode or Contact Admin (+94766239744)
-            
-           
-               // reply(jsonformat(all_news))
-            
-           // reply(i.news_id)
-            let sections = []   
-           for (let i of all_news) {
-         //  reply(i.news_id)
-           const list = {title: `ǫᴜᴇᴇɴ  ɴɪʟᴜ ɴᴇᴡs `,
-           rows: [
-                 {
-                  title: `${i.title}`, 
-                  rowId: `getnews ${i.id}`
-                 }, 
-                 ]
-              }
-              sections.push(list)   
-              }
-           const sendm =  QueenNilu.sendMessage(
-               m.chat, 
-               {
-                text: NEWSSS,
-                footer: global.botname+'\n get on helakuru.com' ,
-                title: "*◉  💃𝐐𝐔𝐄𝐄𝐍 𝐍𝐈𝐋𝐔 𝐍𝐄𝐖𝐒 💃 ◉*",
-                buttonText: "GET NEWS",
-                sections
-               }, { quoted : m })    
-            
-            //all
-           /* const all_news = await esana_scrape({ fetch: 'all' , passcode: 'your_passcode'}) // Enter Your Passcode or Contact Admin (+94766239744)
-            reply(latest_news)*/
-            await QueenNilu.sendMessage(m.chat,{delete : load.key })  
-           
-            
-            }
-            break
-            case 'getnews' : {
-            const load = await QueenNilu.sendText(m.chat, mess.wait , m, )
-         
-            const {esana_scrape, esana_latest_news_id, esana_scrape_from_id} = require("esana-node-api").esana_news;
-            const helnews = await esana_scrape_from_id({ id: text , passcode: 'uakdmin_sr_2064'})
-          //  reply(jsonformat(helnews))        
-         
-         const title = helnews.news_from_id.helakuru.title
-         const news = helnews.news_from_id.helakuru.description
-         const img = helnews.news_from_id.helakuru.thumb
-         const url = helnews.news_from_id.helakuru.url
-         const date = helnews.news_from_id.helakuru.data
-         
-         const cap = `*_🏷️ Title_ ${title}*\n\n*_📄 News_* ${news}\n`
-         const templateButtons = [
-             {index: 1, urlButton: {displayText: `ɴᴇᴡs ᴜʀʟ`, url: url }},
-         ]
-         
-         const templateMessage = {
-             image: {url: img },
-             caption: '     ◉ 💃 *𝚀𝚄𝙴𝙴𝙽 𝙽𝙸𝙻𝚄 𝙽𝙴𝚆𝚂* 💃 ◉\n\n'+cap,
-             footer: `${global.botname}` ,
-             templateButtons: templateButtons,
-             headerType: 4
-         }
-              
-              await QueenNilu.sendMessage(m.chat, templateMessage, { quoted: m })
-              await QueenNilu.sendMessage(m.chat,{delete : load.key })  
-                    
-                    
-            
-            }
-            break
+
             //////////////////////news End \\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+
+            /////////////////GROUP START \\\\\\\\\\\\\\\
             case 'react': {
                 if (!isCreator) throw mess.owner
                 reactionMessage = {
@@ -1614,6 +1343,11 @@ Cieeee, What's Going On❤️💖👀`
 		await QueenNilu.groupParticipantsUpdate(m.chat, [users], 'demote').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
 	}
 	break
+
+    ///////////////////////GROUP END \\\\\\\\\\\\\\\\\\\
+    
+
+    //////////////////CHAT START\\\\\\\\\\\\
         case 'block': {
 		if (!isCreator) throw mess.owner
 		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
@@ -1626,6 +1360,70 @@ Cieeee, What's Going On❤️💖👀`
 		await QueenNilu.updateBlockStatus(users, 'unblock').then((res) => m.reply(jsonformat(res))).catch((err) => m.reply(jsonformat(err)))
 	}
 	break
+
+    ////////////CHAT END\\\\\\\\\\\
+
+/////////////GROUP SETTINGS \\\\\\
+case 'group': case 'grup': {
+    if (!m.isGroup) throw mess.group
+    if (!isBotAdmins) throw mess.botAdmin
+    if (!isAdmins) throw mess.admin
+    if (args[0] === 'close'){
+        await QueenNilu.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(Lang.G_MUTE)).catch((err) => reply(jsonformat(err)))
+    } else if (args[0] === 'open'){
+        await QueenNilu.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(Lang.G_UNMUTE)).catch((err) => reply(jsonformat(err)))
+    } else {
+    let buttons = [
+            { buttonId: 'group open', buttonText: { displayText: 'Open' }, type: 1 },
+            { buttonId: 'group close', buttonText: { displayText: 'Close' }, type: 1 }
+        ]
+        await QueenNilu.sendButtonText(m.chat, buttons, `Group Mode`, QueenNilu.user.name, m)
+
+ }
+}
+break
+case 'mute':{
+    if (!m.isGroup) throw mess.group
+    if (!isBotAdmins) throw mess.botAdmin
+    if (!isAdmins) throw mess.admin
+    
+    await QueenNilu.sendMessage(from, { react: { text: `🔐`, key: m.key }})
+    await QueenNilu.groupSettingUpdate(m.chat, 'announcement')
+    const sendmsg = await QueenNilu.sendText(m.chat,Lang.G_MUTE)
+    await QueenNilu.sendMessage(from, { react: { text: `🔇`, key: sendmsg.key }})
+    
+   }
+   break
+case 'unmute':{
+    if (!m.isGroup) throw mess.group
+    if (!isBotAdmins) throw mess.botAdmin
+    if (!isAdmins) throw mess.admin
+    await QueenNilu.sendMessage(from, { react: { text: `🔓`, key: m.key }})
+    await QueenNilu.groupSettingUpdate(m.chat, 'not_announcement')
+    const sendmsg = await QueenNilu.sendText(m.chat,Lang.G_UNMUTE)
+    await QueenNilu.sendMessage(from, { react: { text: `🔊`, key: sendmsg.key }})
+    
+ }
+ break
+case 'editinfo': {
+    if (!m.isGroup) throw mess.group
+    if (!isBotAdmins) throw mess.botAdmin
+    if (!isAdmins) throw mess.admin
+ if (args[0] === 'open'){
+    await QueenNilu.groupSettingUpdate(m.chat, 'unlocked').then((res) => reply(Lang.G_INFOON)).catch((err) => reply(jsonformat(err)))
+ } else if (args[0] === 'close'){
+    await QueenNilu.groupSettingUpdate(m.chat, 'locked').then((res) => reply(Lang.G_UNMUTE)).catch((err) => reply(jsonformat(err)))
+ } else {
+ let buttons = [
+            { buttonId: 'editinfo open', buttonText: { displayText: 'OPEN' }, type: 1 },
+            { buttonId: 'editinfo close', buttonText: { displayText: 'CLOSE' }, type: 1 }
+        ]
+        await QueenNilu.sendButtonText(m.chat, buttons, `Mode Edit Info`, QueenNilu.user.name, m)
+
+}
+}
+break
+
 	    case 'setname': case 'setsubject': {
                 if (!m.isGroup) throw mess.group
                 if (!isBotAdmins) throw mess.botAdmin
@@ -1663,6 +1461,57 @@ Cieeee, What's Going On❤️💖👀`
                 m.reply(mess.success)
                 }
                 break
+                
+                case 'grupinfo': case 'groupinfo':
+                try{
+                 var pic = await QueenNilu.getProfilePicture(m.chat)
+                  } catch {
+                 var pic = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
+                  }
+                let ingfo = `*𝗚𝗥𝗢𝗨𝗣 𝗜𝗡𝗙𝗢*\n\n*𝗡𝗔𝗠𝗘 :* ${groupName}\n*𝗜𝗗 𝗚𝗥𝗢𝗨𝗣:* ${m.chat}\n*𝗠𝗔𝗗𝗘 :* ${moment(`${groupMetadata.creation}` * 1000).tz('Africa/Harare').format('DD/MM/YYYY HH:mm:ss')}\n*𝗚𝗥𝗢𝗨𝗣 𝗢𝗪𝗡𝗘𝗥:* @${groupMetadata.owner.split('@')[0]}\n*𝗔𝗗𝗠𝗜𝗡𝗦 :* ${groupAdmins.length}\n*𝗠𝗘𝗠𝗕𝗘𝗥𝗦 :* ${participants.length}\n*𝗗𝗘𝗦𝗖 :* \n${groupMetadata.desc}`
+                ds = await getBuffer(pic)
+                QueenNilu.sendMessage(m.chat, { image: ds,caption: ingfo, mentions: [groupMetadata.owner] }, { quoted: m})
+                break
+                case 'tagadmin' : {
+                if (!m.isGroup) throw mess.group
+                let teks = ` _❗ ${groupName}Admins ❗_
+                
+*MASSAGE :* ${q ? q : 'blank'}\n\n`
+                for (let mem of groupAdmins) {
+                                teks += `    `
+                                }
+                QueenNilu.sendMessage(m.chat, { text: teks, mentions: groupAdmins.map(a => a.id) }, { quoted: m })
+                                
+                }
+                break
+                            case 'tagall': case 'tag': {
+                                if (!m.isGroup) throw mess.group
+                                if (!isBotAdmins) throw mess.botAdmin
+                                if (!isAdmins) throw mess.admin
+                let teks = ` *ＧＲＯＵＰ  ＮＯＴＩＦＹ*
+                 
+                  *𝐌𝐄𝐒𝐒𝐀𝐆𝐄 : ${q ? q : 'blank'}*\n\n`
+                                for (let mem of participants) {
+                                teks += `🔵 @${mem.id.split('@')[0]}\n`
+                                }
+                                QueenNilu.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
+                                }
+                                break
+                                case 'hidetag': {
+                            if (!m.isGroup) throw mess.group
+                            if (!isAdmins) throw mess.admin
+                            QueenNilu.sendMessage(m.chat, { text : q ? q : '' , mentions: participants.map(a => a.id)}, { quoted: m })
+                            }
+                            break
+                            case '####taggrp': {
+                            for (let mem of participants) {
+                               await QueenNilu.sendText(m.chat,mem.id) 
+                                }
+                            
+ }
+                            break
+
+                /////////BOT SETTING S\\\\
                 case 'setexif': {
                     if (!isCreator) return replay(`${mess.owner}`)
                     if (!text) return replay(`${Lang.EXAMPLE}\n : ${prefix + command} packname|author`)
@@ -1718,54 +1567,7 @@ Cieeee, What's Going On❤️💖👀`
                reply('*✅ _*\n '+'```'+global.tiktokthub+ '```')
                  }
                  break
-                       case 'grupinfo': case 'groupinfo':
-                       try{
-                        var pic = await QueenNilu.getProfilePicture(m.chat)
-                         } catch {
-                        var pic = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
-                         }
-                       let ingfo = `*𝗚𝗥𝗢𝗨𝗣 𝗜𝗡𝗙𝗢*\n\n*𝗡𝗔𝗠𝗘 :* ${groupName}\n*𝗜𝗗 𝗚𝗥𝗢𝗨𝗣:* ${m.chat}\n*𝗠𝗔𝗗𝗘 :* ${moment(`${groupMetadata.creation}` * 1000).tz('Africa/Harare').format('DD/MM/YYYY HH:mm:ss')}\n*𝗚𝗥𝗢𝗨𝗣 𝗢𝗪𝗡𝗘𝗥:* @${groupMetadata.owner.split('@')[0]}\n*𝗔𝗗𝗠𝗜𝗡𝗦 :* ${groupAdmins.length}\n*𝗠𝗘𝗠𝗕𝗘𝗥𝗦 :* ${participants.length}\n*𝗗𝗘𝗦𝗖 :* \n${groupMetadata.desc}`
-                       ds = await getBuffer(pic)
-                       QueenNilu.sendMessage(m.chat, { image: ds,caption: ingfo, mentions: [groupMetadata.owner] }, { quoted: m})
-                       break
-                       case 'tagadmin' : {
-                       if (!m.isGroup) throw mess.group
-                       let teks = ` _❗ ${groupName}Admins ❗_
                        
-     *MASSAGE :* ${q ? q : 'blank'}\n\n`
-                       for (let mem of groupAdmins) {
-                                       teks += `    `
-                                       }
-                       QueenNilu.sendMessage(m.chat, { text: teks, mentions: groupAdmins.map(a => a.id) }, { quoted: m })
-                                       
-                       }
-                       break
-                                   case 'tagall': case 'tag': {
-                                       if (!m.isGroup) throw mess.group
-                                       if (!isBotAdmins) throw mess.botAdmin
-                                       if (!isAdmins) throw mess.admin
-                       let teks = ` *ＧＲＯＵＰ  ＮＯＴＩＦＹ*
-                        
-                         *𝐌𝐄𝐒𝐒𝐀𝐆𝐄 : ${q ? q : 'blank'}*\n\n`
-                                       for (let mem of participants) {
-                                       teks += `🔵 @${mem.id.split('@')[0]}\n`
-                                       }
-                                       QueenNilu.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
-                                       }
-                                       break
-                                       case 'hidetag': {
-                                   if (!m.isGroup) throw mess.group
-                                   if (!isAdmins) throw mess.admin
-                                   QueenNilu.sendMessage(m.chat, { text : q ? q : '' , mentions: participants.map(a => a.id)}, { quoted: m })
-                                   }
-                                   break
-                                   case '####taggrp': {
-                                   for (let mem of participants) {
-                                      await QueenNilu.sendText(m.chat,mem.id) 
-                                       }
-                                   
-        }
-                                   break
 	    case 'style': case 'styletext': {
 	        if ( global.db.data.users[m.sender].limit < 1) return m.reply(mess.endLimit) // response when limit runs out
 		db.data.users[m.sender].limit -= 1 // -1 limit
@@ -1941,167 +1743,7 @@ break
             m.reply('Successfully Deleted Vote Session In This Group')
 	    }
             break
-            case 'group': case 'grup': {
-             if (!m.isGroup) throw mess.group
-             if (!isBotAdmins) throw mess.botAdmin
-             if (!isAdmins) throw mess.admin
-             if (args[0] === 'close'){
-                 await QueenNilu.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(Lang.G_MUTE)).catch((err) => reply(jsonformat(err)))
-             } else if (args[0] === 'open'){
-                 await QueenNilu.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(Lang.G_UNMUTE)).catch((err) => reply(jsonformat(err)))
-             } else {
-             let buttons = [
-                     { buttonId: 'group open', buttonText: { displayText: 'Open' }, type: 1 },
-                     { buttonId: 'group close', buttonText: { displayText: 'Close' }, type: 1 }
-                 ]
-                 await QueenNilu.sendButtonText(m.chat, buttons, `Group Mode`, QueenNilu.user.name, m)
-
-          }
-         }
-         break
-         case 'mute':{
-             if (!m.isGroup) throw mess.group
-             if (!isBotAdmins) throw mess.botAdmin
-             if (!isAdmins) throw mess.admin
-             
-             await QueenNilu.sendMessage(from, { react: { text: `🔐`, key: m.key }})
-             await QueenNilu.groupSettingUpdate(m.chat, 'announcement')
-             const sendmsg = await QueenNilu.sendText(m.chat,Lang.G_MUTE)
-             await QueenNilu.sendMessage(from, { react: { text: `🔇`, key: sendmsg.key }})
-             
-            }
-            break
-         case 'unmute':{
-             if (!m.isGroup) throw mess.group
-             if (!isBotAdmins) throw mess.botAdmin
-             if (!isAdmins) throw mess.admin
-             await QueenNilu.sendMessage(from, { react: { text: `🔓`, key: m.key }})
-             await QueenNilu.groupSettingUpdate(m.chat, 'not_announcement')
-             const sendmsg = await QueenNilu.sendText(m.chat,Lang.G_UNMUTE)
-             await QueenNilu.sendMessage(from, { react: { text: `🔊`, key: sendmsg.key }})
-             
-          }
-          break
-         case 'editinfo': {
-             if (!m.isGroup) throw mess.group
-             if (!isBotAdmins) throw mess.botAdmin
-             if (!isAdmins) throw mess.admin
-          if (args[0] === 'open'){
-             await QueenNilu.groupSettingUpdate(m.chat, 'unlocked').then((res) => reply(Lang.G_INFOON)).catch((err) => reply(jsonformat(err)))
-          } else if (args[0] === 'close'){
-             await QueenNilu.groupSettingUpdate(m.chat, 'locked').then((res) => reply(Lang.G_UNMUTE)).catch((err) => reply(jsonformat(err)))
-          } else {
-          let buttons = [
-                     { buttonId: 'editinfo open', buttonText: { displayText: 'OPEN' }, type: 1 },
-                     { buttonId: 'editinfo close', buttonText: { displayText: 'CLOSE' }, type: 1 }
-                 ]
-                 await QueenNilu.sendButtonText(m.chat, buttons, `Mode Edit Info`, QueenNilu.user.name, m)
-
-         }
-         }
-         break
-         case 'xnxxsh2': {
-                                   
-            await QueenNilu.sendMessage(from, { react: { text: `🍑`, key: m.key }})
-            if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} story wa anime`
-            
-            let search = await fetchJson(`https://nimaxxx.herokuapp.com/api/srhx?q=${text}`)
-            let teks = '*🎭 XNXX RESULTS 🎭* '+text+'\n\n'
-            let no = 1
-            for (let i of search) {
-                teks += `🔵 No : ${no++}\n👽 title - ${i.title}\n🔄 Duration : ${i.duration}\n 🤤 URL - ${i.link}\n\n─────────────────\n\n`
-            }
-            QueenNilu.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/023d7602dcf73bd2638a6.jpg' },  caption: teks }, { quoted: m })
-        }
-        break
-        case 'xvideo': {
-           // if (m.isGroup) throw  '*CAN\T DOWNLOAD ON GROUPS*'
-           if (SEX_DL == 'true' ){
-            await QueenNilu.sendMessage(from, { react: { text: `🔞`, key: m.key }})
-            if (!text) throw `${Lang.EXAMPLE}\n : ${prefix + command} step sister`
-            
-            let nilu = await fetchJson(`http://kocakz.herokuapp.com/api/media/xvideo/search?query=${text}`)
-            let teks = '*🎭  XVIDEO RESULTS  🎭* '+text+'\n\n'
-            let no = 1
-            const search = nilu.result
-            for (let i of search) {
-                teks += `🔵 No : ${no++}\n*👽 title :* ${i.title}\n*🗳️ Info :* ${i.info}\n*☞ url :* ${i.link}\n\n─────────────────\n\n`
-            }
-            QueenNilu.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/1d4a15912ba140214fa37.jpg' },  caption: teks }, { quoted: m })
-            }else {
-            m.reply('*18+ DOWNLOAD IS DESABLE BY OWNER*')
-            }
-        }
-        break
-      /*  case 'xnxx' : {
-        if(!SEX_DL == 'true') return m.reply('*18+ DOWNLOAD IS DESABLE BY OWNER*')
-        if(!text) return m.reply('*👸💬 Please Give me a xnxx video title !*\n'+'```.xnxx mia kalifa```')
-        const nilu = await fetchJson(`https://nimaxxx.herokuapp.com/api/srhx?q=${text}`)
-        const url = nilu.result.link
-        const title = nilu.result.title
-        const dlnima = await fetchJson(`https://nimaxxx.herokuapp.com/api/dlx?url=${text}`)
-        const dl_url =
-        
-        }
-        break*/
-        case 'downxvid' : {
-      //  if (m.isGroup) throw '*CAN\T DOWNLOAD ON GROUPS*'
-            if(SEX_DL == 'true' ){
-
-// if (!isUrl(text) && !text.includes('https://www.xvideos.com/')) return reply ( '*👸💬 Please give me a correct link*\n'+'```example : .downxvid https://www.xvideos.com/video31785617/milf_jessryan_hot_video_clip_pussy_play_time```')
-//  const nilu = await fetchJson(`http://kocakz.herokuapp.com/api/media/xvideo/detail?url=${text}`)
-//const video = nilu.files.low
-         if(!text) return reply('*👸💬 Please give me a link*\n'+'```example : .downxvid https://www.xvideos.com/video31785617/milf_jessryan_hot_video_clip_pussy_play_time```')
-         if(!args[0].includes('https://www.xvideos.com/')) return reply ( '*👸💬 Please give me a correct link*\n'+'```example : .downxvid https://www.xvideos.com/video31785617/milf_jessryan_hot_video_clip_pussy_play_time```')
-
-         await QueenNilu.sendText(m.chat, `*🔄 Please wait Downloading _XVIDEO_ Video ${m.pushName}...*`, m, )
-         const vid = await fetchJson(`http://kocakz.herokuapp.com/api/media/xvideo/detail?url=${text}`)
-         const video = vid.result.files.low
-         const image = vid.result.image
-         
-         await QueenNilu.sendMessage(m.chat, { image: { url: image },  caption: `┌       *༺ 📥  𝚇𝚅𝙸𝙳𝙴𝙾 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁  📥 ༻*
-         
-         
-│ *📡 ᴛɪᴛʟᴇ* : ${vid.result.title}
-
-│  *📽️ ᴅᴜʀᴀᴛɪᴏɴ :* ${vid.result.duration} _s_
-
-│ *💥 ǫᴜᴀʟɪᴛʏ :* ${vid.result.quality}
-
-└───────────❍` })
-         await QueenNilu.sendMessage(m.chat, { video: { url: video }, caption: `${m.pushName} *XVIDEO DOWNLOADED*` }, { quoted: m })
-         }else {
-            m.reply('*18+ DOWNLOAD IS DESABLE BY OWNER*')
-            }
-         
-
-}
-break
-        case 'downxnxx' : {
-          
-          if (!isXnxxGrp) throw '*Download is only Alowd this group*\n\n_https://chat.whatsapp.com/FtaEqyeEOmLBeoefGVIulP_\n\n❍ ~if you want download xnxx video join this~'
-         await QueenNilu.sendMessage(from, { react: { text: `🤤`, key: m.key }})
-         await QueenNilu.sendText(m.chat, `*🔄 Please wait Downloading Xnxx Video ${m.pushName}...*`, m, )
-         const vid = await axios.get(`https://nimaxxx.herokuapp.com/api/dlx?url=${text}`)
-         const video = vid.data.url
-         const image = vid.data.thumb
-         
-         await QueenNilu.sendMessage(m.chat, { image: { url: image },  caption: `┌       *༺ 📥  𝚇𝙽𝚇𝚇 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁  📥 ༻*
-         
-         
-│ *📡 ᴛɪᴛʟᴇ* : ${vid.data.title}
-
-│  *📽️ ᴅᴜʀᴀᴛɪᴏɴ :* ${vid.data.duration}
-
-│ *💥 ǫᴜᴀʟɪᴛʏ :* ${vid.data.quality}
-
-│ *👁 ᴠɪᴇᴡs :* ${vid.data.views}
-
-└───────────❍` })
-         await QueenNilu.sendMessage(m.chat, { video: { url: video }, caption: `*💥 SUCCESS DOWNLOAD XNXX VIDEO 💥*` }, { quoted: m })
-         
-        }
-        break
+           
         
 case 'stupidcheck':case 'uncleancheck':
 case 'hotcheck': case 'smartcheck':
@@ -2755,71 +2397,6 @@ if (!text) return m.reply(`Example : ${prefix + command} Stay jb`)
 
                             }
                           break
-                               /////test/
-
-                               case 'nilus':{
-                                var GIVEME = ''
-                                if (global.LANG == 'SI') GIVEME = "```💃 කරුනාකර මට ගීතයක නමක් ලබාදෙන්න.```\n*උදාහරණ - .song rosa male natuwe katu*"
-                                if (global.LANG == 'EN') GIVEME ="```💃 Please give me a song name.```\n *Example - .song rosa male natuwe katu*"
-
-                                await QueenNilu.sendMessage(from, { react: { text: `🎵`, key: m.key }})
-                                if (!text) return reply(GIVEME)
-                                await QueenNilu.sendText(m.chat, mess.wait, m, )
-                                           await fetchJson(`https://api.akuari.my.id/search/youtube?query=${text}`)
-                                            .then(async (janiya) => { 
-                                                
-                                                
-                                   const footer = global.botname
-                                   const buttons = [
-                                    {buttonId: `niluj ${janiya.hasil[0].url}`, buttonText: {displayText: '📁 DOCUMENT 📁'}, type: 1},
-                                    {buttonId: `niluj ${janiya.hasil[0].url}`, buttonText: {displayText: '🎧 AUDIO 🎧'}, type: 1}
-                                                     
-                                                ]
-                                            const buttonMessage = {    
-                                                image: { url: janiya.hasil[0].thumbnail },
-                                                caption: `◉⦁[ *💃 𝙽𝙸𝙻𝚄 𝚂𝙾𝙽𝙶 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙴𝚁 💃* ]⦁◉
-                                
-                                            *ᴀʙᴏᴜᴛ ʏᴏᴜʀ ʀᴇsᴜʟᴛ...*
-                 
-                                            ➥ ᴛɪᴛʟᴇ -  ${janiya.hasil[0].title}
-                                           
-                                            ➥ ᴠɪᴇᴡs - ${janiya.hasil[0].views}
-                                           
-                                            ➥ ᴅᴜʀᴀᴛɪᴏɴ - ${janiya.hasil[0].timestamp}
-                                           
-                                            ➥ ᴜᴘʟᴏᴀᴅ ᴏɴ - ${janiya.hasil[0].ago}
-                                           
-                                            ➥ ᴜʀʟ - ${janiya.hasil[0].url}`,
-                                            footer: footer,
-                                            buttons: buttons,
-                                            headerType: 4
-                                        
-                                        
-                                                }
-                                                
-                                           await QueenNilu.sendMessage(m.chat, buttonMessage, { quoted: m })
-                                            }).catch((err) => m.reply(NOT_FOUND))
-                                       }
-                                       break    
-                                       
-                                       case 'niluj' : {
-                                            if (!text.includes('https://youtube.com')) return reply('*💃 Please give me a correct link*\n _.song https://youtube.com/watch?v=b_yvlcRn0cM_')
-                                            await QueenNilu.sendMessage(from, { react: { text: `🔄`, key: m.key }})
-                                                const song = await fetchJson(`https://api.akuari.my.id/downloader/youtube3?link=${text}`)
-                                                
-                                                await QueenNilu.sendMessage(from, { text: `*📤 Uploading  ...*` }, { quoted: m })
-                                                const load = await QueenNilu.sendText(m.chat,global.SONG_DOWN, m, )
-                                                
-                                                QueenNilu.sendMessage(m.chat, {audio:{ song: audio.audio }, mimetype:"audio/mpeg", fileName: `${song.title}.mp3`,  quoted: m})
-
-                                                await QueenNilu.sendMessage(from, { react: { text: `⬆️`, key: m.key }})
-                                                await QueenNilu.sendMessage(from, { react: { text: `✅`, key: m.key }}).catch((err) => m.reply(NOT_FOUND))
-                                                await QueenNilu.sendMessage(m.chat,{delete : load.key })  
-                                              }
-                                            break
-
-
-                                            /////////////
                                                                          
                                               case 'video': { 
                 const rash = await fetchJson(`https://github.com/Dragonxjanith/janiya--x/raw/main/SongVideo.jsons/songdl.json`)
